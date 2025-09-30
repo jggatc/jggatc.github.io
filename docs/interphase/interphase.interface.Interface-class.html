@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>interphase.interface.Interface</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="interphase-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/interphase" target="_top">Interphase Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="interphase-module.html">Package&nbsp;interphase</a> ::
+        <a href="interphase.interface-module.html">Module&nbsp;interface</a> ::
+        Class&nbsp;Interface
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Interface</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+env.engine.sprite.Sprite --+
+                           |
+                          <strong class="uidshort">Interface</strong>
+</pre>
+
+<hr />
+<p><strong>Interface Object</strong></p>
+<p>To design an interface panel, interphase.Interface can be subclassed. Within the __init__() method call interphase.Interface.__init__(). Interface Object provides methods to design and utilize an interface panel. Use add() to add controls to panel, place into a method called add_controls(); if controls added otherwise call activate() to activate the panel. The module maintains the update of the panel including changes through the methods, however panel_update() can be used to force an update if required. If the Interface Object is subclassed, when overriding the update() method call interphase.Interface.update().</p>
+<p>Interface interaction can be maintained with the InterfaceState object, that is returned by update() or get_state(), or through Pygame event queue checking for event.type interphase.EVENT[ 'controlselect' ] and interphase.EVENT[ 'controlinteract' ] with the attribute event.state that references the InterfaceState object. To turn the panel off, deactivate() sets state.active to false. The panel can be drawn to the display with the draw() method.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interphase.interface.Interface-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">identity</span>=<span class="summary-sig-default">'Interface_Panel'</span>,
+        <span class="summary-sig-arg">position</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default">(0,0,0)</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">(350,100)</span>,
+        <span class="summary-sig-arg">screen</span>=<span class="summary-sig-default">(500,500)</span>,
+        <span class="summary-sig-arg">moveable</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">position_offset</span>=<span class="summary-sig-default">(0,0)</span>,
+        <span class="summary-sig-arg">move_rate</span>=<span class="summary-sig-default">(200,200)</span>,
+        <span class="summary-sig-arg">fixed</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">button_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">control_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">control_minsize</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">control_size</span>=<span class="summary-sig-default">'min'</span>,
+        <span class="summary-sig-arg">button_size</span>=<span class="summary-sig-default">(12,12)</span>,
+        <span class="summary-sig-arg">function_button</span>=<span class="summary-sig-default">'left'</span>,
+        <span class="summary-sig-arg">control_button</span>=<span class="summary-sig-default">'right'</span>,
+        <span class="summary-sig-arg">scroll_button</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_color</span>=<span class="summary-sig-default">(125,130,135)</span>,
+        <span class="summary-sig-arg">font_type</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_size</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">label_display</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">info_display</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">info_fontsize</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">info_fontcolor</span>=<span class="summary-sig-default">(125,130,135)</span>,
+        <span class="summary-sig-arg">info_position</span>=<span class="summary-sig-default">(2,0)</span>,
+        <span class="summary-sig-arg">tips_display</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">tips_fontsize</span>=<span class="summary-sig-default">8</span>,
+        <span class="summary-sig-arg">tips_fontcolor</span>=<span class="summary-sig-default">(125,130,135)</span>,
+        <span class="summary-sig-arg">tips_position</span>=<span class="summary-sig-default">(0,-15)</span>,
+        <span class="summary-sig-arg">control_response</span>=<span class="summary-sig-default">125</span>,
+        <span class="summary-sig-arg">pointer_interact</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">'data'</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">text_paste</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">event</span>=<span class="summary-sig-default">False</span>)</span><br />
+      **Interface Object: Define panel.**</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_controls"></a><span class="summary-sig-name">add_controls</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Method to overide in subclass for adding controls.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add"></a><span class="summary-sig-name">add</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">identity</span>,
+        <span class="summary-sig-arg">control_type</span>,
+        <span class="summary-sig-arg">position</span>,
+        <span class="summary-sig-arg">**parameters</span>)</span><br />
+      Add control to panel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="activate"></a><span class="summary-sig-name">activate</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">activate_panel</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Panel activation.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="deactivate"></a><span class="summary-sig-name">deactivate</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Panel deactivation.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_control"></a><span class="summary-sig-name">add_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">identity</span>,
+        <span class="summary-sig-arg">control_type</span>,
+        <span class="summary-sig-arg">position</span>,
+        <span class="summary-sig-arg">**parameters</span>)</span><br />
+      Add control to panel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_control"></a><span class="summary-sig-name">get_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*control</span>)</span><br />
+      Retrieve control object. Multiple controls return a dictionary of control objects, and if no parameter given return dictionary of all control objects.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="remove_control"></a><span class="summary-sig-name">remove_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*control</span>)</span><br />
+      Remove control from panel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="enable_control"></a><span class="summary-sig-name">enable_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*control</span>)</span><br />
+      Set control enabled.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="disable_control"></a><span class="summary-sig-name">disable_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*control</span>)</span><br />
+      Set control disabled.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_value"></a><span class="summary-sig-name">get_value</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*control</span>)</span><br />
+      Retrieve current value of control. Multiple controls return a dictionary of values, and if no parameter given return dictionary of all values.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_position"></a><span class="summary-sig-name">get_position</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve panel position.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_size"></a><span class="summary-sig-name">get_size</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve panel size.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_default_image"></a><span class="summary-sig-name">get_default_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get or save default images.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_panel_image"></a><span class="summary-sig-name">get_panel_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">change</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Get panel image to modify. Parameter Change - True: mod permanent, False: mod transitory.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_panel_image"></a><span class="summary-sig-name">set_panel_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set image used for panel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_control_image"></a><span class="summary-sig-name">set_control_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set image used for control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_button_image"></a><span class="summary-sig-name">set_button_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">button_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set image used for buttons.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_clipboard"></a><span class="summary-sig-name">get_clipboard</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve text from clipboard.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_clipboard"></a><span class="summary-sig-name">set_clipboard</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Save text to clipboard.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_active"></a><span class="summary-sig-name">is_active</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether panel is active.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_moveable"></a><span class="summary-sig-name">is_moveable</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Check whether panel is moveable.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_moveable"></a><span class="summary-sig-name">set_moveable</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>,
+        <span class="summary-sig-arg">position_offset</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">move_rate</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set panel moveable setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="move"></a><span class="summary-sig-name">move</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Move panel to new position x,y.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_panel_display"></a><span class="summary-sig-name">is_panel_display</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether panel controls displayed or toggled with pointer interaction.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_panel_display"></a><span class="summary-sig-name">set_panel_display</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set panel controls displayed or toggled with pointer interaction.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_info_display"></a><span class="summary-sig-name">is_info_display</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether info is displayed.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_info_display"></a><span class="summary-sig-name">set_info_display</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set info display setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_label_display"></a><span class="summary-sig-name">is_label_display</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether label is displayed.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_label_display"></a><span class="summary-sig-name">set_label_display</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set label display setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_tips_display"></a><span class="summary-sig-name">is_tips_display</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether tips are displayed.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_tips_display"></a><span class="summary-sig-name">set_tips_display</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set tips display setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_info"></a><span class="summary-sig-name">add_info</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*message_append</span>)</span><br />
+      Add text to info.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear_info"></a><span class="summary-sig-name">clear_info</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Clear text from info.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_id"></a><span class="summary-sig-name">get_id</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get panel identity</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_state"></a><span class="summary-sig-name">get_state</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the state object of the panel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_update"></a><span class="summary-sig-name">set_update</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sustain</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Set panel update. Parameter: sustain bool for continuous update, default False.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_update"></a><span class="summary-sig-name">is_update</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check if panel was updated or set to sustained update.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="draw"></a><span class="summary-sig-name">draw</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">surface</span>)</span><br />
+      Draw panel on surface. Return Rect of surface area changed.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">surface</span>,
+        <span class="summary-sig-arg">background</span>)</span><br />
+      Clear panel from surface of previous draw, using background.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_pointer_position"></a><span class="summary-sig-name">get_pointer_position</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get position of pointer determined at latest update.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_pointer_interact"></a><span class="summary-sig-name">set_pointer_interact</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set pointer interact monitoring.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="process_event"></a><span class="summary-sig-name">process_event</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">clear</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Internally process event handlers.
+Required if no call to framework event method such as event.get or event.pump.
+Optional clear argument to remove events from framework event queue.
+With scroll_button active, call panel update prior to framework event method calls.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_event_queue"></a><span class="summary-sig-name">get_event_queue</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return interface event queue.
+Event queue has mouse press events sequestered upon panel interaction with scroll_button active.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="move_control"></a><span class="summary-sig-name">move_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">position</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Move selected control. If no position supplied, use position of mouse pointer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_control_move"></a><span class="summary-sig-name">set_control_move</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">mouse_visible</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Select control to move.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_control_move"></a><span class="summary-sig-name">get_control_move</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return selected control to move.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_control_moveable"></a><span class="summary-sig-name">is_control_moveable</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether control is moveable.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_control_moveable"></a><span class="summary-sig-name">set_control_moveable</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set control moveable.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_panel_function"></a><span class="summary-sig-name">set_panel_function</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add function to panel update list, call without function to delete list.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="panel_update"></a><span class="summary-sig-name">panel_update</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force_update</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Update control panel, determines interaction, does control action.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="update"></a><span class="summary-sig-name">update</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Update control panel. If overriding in interface subclass, call Interface.update(self).</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">identity</span>=<span class="sig-default">'Interface_Panel'</span>,
+        <span class="sig-arg">position</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">image</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default">(0,0,0)</span>,
+        <span class="sig-arg">size</span>=<span class="sig-default">(350,100)</span>,
+        <span class="sig-arg">screen</span>=<span class="sig-default">(500,500)</span>,
+        <span class="sig-arg">moveable</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">position_offset</span>=<span class="sig-default">(0,0)</span>,
+        <span class="sig-arg">move_rate</span>=<span class="sig-default">(200,200)</span>,
+        <span class="sig-arg">fixed</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">button_image</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">control_image</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">color_key</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">control_minsize</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">control_size</span>=<span class="sig-default">'min'</span>,
+        <span class="sig-arg">button_size</span>=<span class="sig-default">(12,12)</span>,
+        <span class="sig-arg">function_button</span>=<span class="sig-default">'left'</span>,
+        <span class="sig-arg">control_button</span>=<span class="sig-default">'right'</span>,
+        <span class="sig-arg">scroll_button</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">font_color</span>=<span class="sig-default">(125,130,135)</span>,
+        <span class="sig-arg">font_type</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">font_size</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">label_display</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">info_display</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">info_fontsize</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">info_fontcolor</span>=<span class="sig-default">(125,130,135)</span>,
+        <span class="sig-arg">info_position</span>=<span class="sig-default">(2,0)</span>,
+        <span class="sig-arg">tips_display</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">tips_fontsize</span>=<span class="sig-default">8</span>,
+        <span class="sig-arg">tips_fontcolor</span>=<span class="sig-default">(125,130,135)</span>,
+        <span class="sig-arg">tips_position</span>=<span class="sig-default">(0,-15)</span>,
+        <span class="sig-arg">control_response</span>=<span class="sig-default">125</span>,
+        <span class="sig-arg">pointer_interact</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">data_folder</span>=<span class="sig-default">'data'</span>,
+        <span class="sig-arg">data_zip</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">text_paste</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">event</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+**Interface Object: Define panel.**
+
+Optional Parameters &lt;default&gt;:
+identity: 'id' panel name &lt;'Interface_Panel'&gt;.
+position: (x,y) panel placement on screen &lt;None&gt;.
+    values &lt; 1 are %screen.
+    None centers on screen.
+image: 'image' panel image &lt;None&gt;.
+    None use default image, 'none' suppress default image.
+    Image in data folder.
+color: (r,g,b) panel color &lt;(0,0,0)&gt;.
+size: (w,h) dimension of panel &lt;(350,100)&gt;.
+screen: (w,h) dimension of screen &lt;(500,500)&gt;.
+moveable: bool panel can move &lt;False&gt;.
+position_offset: (x,y) panel move offset &lt;(0,0)&gt;.
+move_rate: (x,y) panel move rate pix/s &lt;(200,200)&gt;.
+    values &lt; 1 are %position_offset/s.
+fixed: bool panel fixed in place &lt;False&gt;.
+button_image: ['U','D'] or 'composite' control button image &lt;None&gt;.
+    None use default image, 'none' suppress default image.
+    Image in data folder.
+control_image: 'image' control background image &lt;None&gt;.
+    None use default image, 'none' suppress default image.
+    Image in data folder.
+color_key: (r,g,b) image color key transparency &lt;None&gt;.
+    transparency set by image alpha value or color_key.
+    value -1 color_key from pixel at (0,0).
+control_minsize: (x,y) minimum control size &lt;None&gt;.
+control_size: '' global control size if control_minsize set &lt;'min'&gt;.
+    'auto', 'auto_width': fit items.
+    'min', 'min_width': fit using control_minsize.
+    'panel': use exact control_minsize.
+button_size: (x,y) button size &lt;(12,12)&gt;.
+function_button: placement of buttons of function_select &lt;'left'&gt;.
+control_button: placement of buttons of control_select &lt;'right'&gt;.
+scroll_button: activate scroll wheel &lt;None&gt;.
+    - None,'vertical','horizontal','both'
+font_color: (r,g,b) font color of control text &lt;(125,130,135)&gt;.
+font_type: [] font type list &lt;None&gt;.
+    None: default system font; []: use first font available.
+    &lt;control&gt;.set_display_text(info='system') gets system fonts.
+    'file:&lt;font_name&gt;' path to font file.
+font_size: int font size of control text &lt;10&gt;.
+label_display: bool label displayed &lt;False&gt;.
+info_display: bool info text displayed &lt;False&gt;.
+info_fontsize: int font size used for info text &lt;10&gt;.
+info_fontcolor: (r,g,b) font color used for info text &lt;(125,130,135)&gt;.
+info_position: (x,y) position of info text &lt;(2,0)&gt;.
+tips_display: bool tip text displayed &lt;False&gt;.
+tips_fontsize: int font size used for tip text &lt;8&gt;.
+tips_fontcolor: (r,g,b) font color used for tip text &lt;(125,130,135)&gt;.
+tips_position: (x,y) position offset of tip text &lt;(0,-15)&gt;.
+control_response: int control click response (ms) &lt;125&gt;.
+    - 0 for no response repeat.
+pointer_interact: bool pointer interact monitored &lt;False&gt;.
+data_folder: '' image data folder &lt;'data'&gt;.
+data_zip: '' image data zip &lt;None&gt;.
+text_paste: bool clipboard support &lt;False&gt;.
+event: bool interaction generates events &lt;False&gt;.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="interphase-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/interphase" target="_top">Interphase Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 30 23:22:56 2021
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Deploy JavaScript Application Using Pyjsdl - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+
+<link rel="canonical" href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">
+
+        <meta name="author" content="Jim" />
+        <meta name="keywords" content="html5 canvas,javascript,pygame,pyjs,pyjsdl,python" />
+        <meta name="description" content="The Pyjsdl module is modelled on Pygame/SDL methods that wraps JavaScript functionality including HTML5 canvas. The module permits scripts coded in Python/Pygame to compile to JavaScript using the Pyjs compiler, allowing deployment of JavaScript applications without extensive editing of the script." />
+
+        <meta property="og:site_name" content="GATC" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Deploy JavaScript Application Using Pyjsdl"/>
+        <meta property="og:url" content="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/"/>
+        <meta property="og:description" content="The Pyjsdl module is modelled on Pygame/SDL methods that wraps JavaScript functionality including HTML5 canvas. The module permits scripts coded in Python/Pygame to compile to JavaScript using the Pyjs compiler, allowing deployment of JavaScript applications without extensive editing of the script."/>
+        <meta property="article:published_time" content="2013-07-31" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content="html5 canvas" />
+            <meta property="article:tag" content="javascript" />
+            <meta property="article:tag" content="pygame" />
+            <meta property="article:tag" content="pyjs" />
+            <meta property="article:tag" content="pyjsdl" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:author" content="Jim" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+        <link href="https://jggatc.github.io/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
+              title="GATC Programming ATOM Feed"/>
+
+    
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://jggatc.github.io/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
+                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
+                    <li><a href="https://jggatc.github.io/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/"
+                       rel="bookmark"
+                       title="Permalink to Deploy JavaScript Application Using Pyjsdl">
+                        Deploy JavaScript Application Using Pyjsdl
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-07-31T19:25:00-04:00"> Wed 31 July 2013</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://jggatc.github.io/tag/html5-canvas.html">html5 canvas</a>
+        /
+	<a href="https://jggatc.github.io/tag/javascript.html">javascript</a>
+        /
+	<a href="https://jggatc.github.io/tag/pygame.html">pygame</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjs.html">pyjs</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjsdl.html">pyjsdl</a>
+        /
+	<a href="https://jggatc.github.io/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>The <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> module is modelled on <a class="reference external" href="https://pygame.org/">Pygame</a>/<a class="reference external" href="https://www.libsdl.org">SDL</a> methods that wraps JavaScript functionality including HTML5 canvas. The module permits scripts coded in <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> to compile to JavaScript using the <a class="reference external" href="http://pyjs.org/">Pyjs</a> compiler, allowing deployment of JavaScript applications without extensive editing of the script.</p>
+<p>The following JavaScript application was deployed using Pyjsdl:</p>
+<div class="jsapp-box" data-width="400" data-height="300" id="app-container-serpentduel">
+    <input type="button" value="Launch" id="launch-button" onclick="appFrameLauncher('serpentduel')">
+    <div id="app-title">Pyjsdl Demo</div>
+</div><div class="app-caption docutils container">
+The demo was compiled to JavaScript from a <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a> coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> module.</div>
+<p>For an example, <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">download</a> the Python script used to compile this application, which was derived from the Serpent Duel program in <a class="reference external" href="https://jggatc.github.io/projects/interphase-pack/">Interphase Pack</a>. This post describes the steps required to deploy an application under the Linux environment, which should provide the fundamentals for other OS environments.</p>
+<p>To compile the script, <a class="reference external" href="/projects/pyjsdl/#pyjsdl-download">download</a> the Pyjsdl module and unpack into the script folder, or on the module path. A Python script requires some modification to work with Pyjsdl and to be compatible with the JavaScript. To import the Pyjsdl module, add the following statement to the script:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyjsdl</span> <span class="k">as</span> <span class="nn">pygame</span>
+</pre></div>
+<p>The statement imports the pyjsdl module and renames it pygame to maintain the validity of the Pygame statements. To adapt the script for browser compatibility, the following statement is necessary:</p>
+<div class="highlight"><pre><span></span><span class="n">pyjsdl</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">run</span><span class="p">,</span> <span class="n">images</span><span class="p">)</span>
+</pre></div>
+<p>The statement takes a run argument and an optional images argument, which provides the browser with a 'run' function to execute and 'images' list to preload. The importance of this statement is due to the nature of Python scripts that usually execute repetitively from a loop statement in a main function, not possible in JavaScript since the browser is single-threaded and must have its own time to do browser routines such as display update and event processing, any continuous loop would lock the browser. Place commands to be repeated for program execution in a function, for instance 'run' function, and this function is passed to the browser to call repeatedly in a time-based manner. The preloading of images is preferred since the browser will not wait until images are downloaded, once images are retrieved the application proceeds.</p>
+<p>Other script changes required are for Pygame methods not supported by the Pyjsdl module, check the <a class="reference external" href="https://jggatc.github.io/docs/pyjsdl">API documentation</a>. Additional changes may be required in Python code to work with Pyjs depending on compilation mode, or code changes that are compatible to JavaScript language structure.</p>
+<p>To compile a Python script to JavaScript, setup a Pyjs development environment. Download Pyjs, the latest update is at <a class="reference external" href="https://github.com/pyjs/pyjs/">Pyjs git repository</a> and follow the installation instructions - to install <a class="reference external" href="https://github.com/jggatc/pyjs/releases/">git build_13-06-12</a>, unpack in a preferred folder and run 'python bootstrap.py'. Pyjs compiles JavaScript code with inclusion of browser-specific code, tests passed for the available Pyjs version with Pyjsdl to compile for the released version of Firefox, check txt file in the Pyjsdl folder for any changes that may be required for other browsers. Pyjsdl requires browsers with HTML5 canvas functionality that is supported by newer browsers. To get information on the JavaScript-compiled script, the browser needs some JavaScript tools such as browser console, check <a class="reference external" href="http://pyjs.org/Developing.html">Pyjs developing information</a> – for instance for Firefox browser the plugins <a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/firebug/">Firebug</a> and <a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/">Web Developer</a> are useful. Another tool that can be used prior to Pyjs compilation is <a class="reference external" href="https://pypi.python.org/pypi/pyflakes">Pyflakes</a> that checks Python syntax.</p>
+<p>To compile script.py, enter the following in a command terminal:</p>
+<div class="highlight"><pre><span></span><span class="o">[</span>pyjs<span class="w"> </span>path<span class="o">]</span>/bin/pyjsbuild<span class="w"> </span>script.py
+</pre></div>
+<p>This command will output compiled script. Pyjs can compile in different modes as described in <a class="reference external" href="https://github.com/pyjs/pyjs/wiki/migrationguide">Pyjs guide</a>, for instance debug mode (-d) provides Python error messages required in program development, strict mode (-S) compiles most Python syntax, and optimized mode (-O) compiles Python omitting some language constructs for smaller JavaScript code with increased performance. The optimized mode restricted Python recognition may require further changes to the script, so preferable to develop in strict mode, and make required changes for optimized mode at a later stage of development. Other useful compiling options are --enable-print-statements to enable console print output, -P that can provide list of browsers (for instance Mozilla) targeted by Pyjs, -o to choose compiling output folder, and --dynamic-link to separate Pyjs compilation of JavaScript from Html file. A couple of examples with debug -d option enabled:</p>
+<div class="highlight"><pre><span></span>pyjsbuild<span class="w"> </span>-S<span class="w"> </span>-d<span class="w"> </span>script.py<span class="w"> </span>-P<span class="w"> </span>Mozilla
+pyjsbuild<span class="w"> </span>-O<span class="w"> </span>-d<span class="w"> </span>script.py<span class="w"> </span>--enable-print-statements<span class="w"> </span>-o<span class="w"> </span>outputdir
+</pre></div>
+<p>Pyjs compiles only code that it detects has been modified since last called, and noticed that if Pyjs compilation mode is changed, the compiled code in the output folder should be removed or choose a different output folder. The output folder will contain script.html that can be run in the browser. The script.html that is compiled runs without change in the Firefox browser.</p>
+<p>For site deployment, script.html may need some editing such as addition of the line at the beginning of the Html file required for some browsers, and possibly other html/style changes. For possible changes to script.html, examine the demo <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a> archive for changes made for its deployment. For deployment, my preference is to use the following compilation command:</p>
+<div class="highlight"><pre><span></span>pyjsbuild<span class="w"> </span>-O<span class="w"> </span>script.py<span class="w"> </span>--dynamic-link
+</pre></div>
+<p>The --dynamic-link option separates JavaScript files in the lib folder with links from the Html files, not only reducing the application size but also allowing for sharing of Pyjs/Pyjdl JavaScript files between multiple applications. For further reduction in size of the application, before deployment the JavaScript code can be compressed with <a class="reference external" href="https://github.com/yui/yuicompressor/">YUI Compressor</a> with the following command executed in output lib folder:</p>
+<div class="highlight"><pre><span></span>yui-compressor<span class="w"> </span>-o<span class="w"> </span><span class="s1">&#39;.js$:.js&#39;</span><span class="w"> </span>*.js
+</pre></div>
+<p>The compressed JavaScript files will replace the original. The output folder containing Html files and linked JavaScript files in the lib folder, along with images folder containing any images, can be deployed online.</p>
+<p>For deployment of a Pyjsdl application on a website, the following Html code can be used:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pyjsdl_demo&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;App: Pyjsdl Demo&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;jsapp_box&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;button&#39;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;Launch&#39;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#39;appLauncher(&quot;pyjsdl_demo&quot;)&#39;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;app_title&quot;</span><span class="p">&gt;</span>Pyjsdl Demo<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>This code asserts a placeholder for the application on the webpage, which is within a div section with id the application name pyjsdl_demo, with a button that calls the JavaScript function appLauncher with the application id argument to launch the application, edit this name to your application. The JavaScript function code follows:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">appLauncher</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">appSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://website.com/apps/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.html&quot;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;pre&gt;&lt;iframe id=&#39;</span><span class="w"> </span><span class="o">+</span>
+<span class="nx">app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; name=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; src=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appSource</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&gt;&lt;/iframe&gt;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+<p>When the JavaScript function appLauncher is called from a webpage, it replaces the webpage div having the given id with an iframe containing the Pyjsdl application, adapt to your application configuration. Place this JavaScript function in an accessible location on the website, such as the webpage header or with other JavaScript functions. Further details can be found in the txt file in demo <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a> archive. With this procedure, your Python script using the Pyjsdl module can be deployed as a JavaScript application.</p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
+
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+        </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 JG
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/#"}>Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+
+    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+
+
+
+</body>
+</html>

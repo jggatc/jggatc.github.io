@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>interphase.control.Control</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="interphase-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/interphase" target="_top">Interphase Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="interphase-module.html">Package&nbsp;interphase</a> ::
+        <a href="interphase.control-module.html">Module&nbsp;control</a> ::
+        Class&nbsp;Control
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Control</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Control</strong>
+</pre>
+
+<hr />
+<p><strong>Control Object</strong></p>
+<p>The Control class provides the base control. To create Control instances, use the add() method of the Interface object, which should be passed the arguments that will be used to instantiate a control.</p>
+<p>Clicking on control with identity 'Control' generates a State Object with the control being 'Control', and button pressed being 'Control' for main button or 'Control_top' or 'Control_bottom' for switches. With the method add_action(), an action function can be attached to the control that will be called when pressed.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interphase.control.Control-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">panel</span>,
+        <span class="summary-sig-arg">identity</span>,
+        <span class="summary-sig-arg">control_type</span>,
+        <span class="summary-sig-arg">position</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default">(40,80,120)</span>,
+        <span class="summary-sig-arg">fill</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">control_outline</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">control_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_type</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">split_text</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">center_text</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">control_list</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">icon_list</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">icon_size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">tip_list</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">link</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">link_activated</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">activated_color</span>=<span class="summary-sig-default">(0,120,160)</span>,
+        <span class="summary-sig-arg">activated_toggle</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">label_display</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">active</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">control_response</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">hold_response</span>=<span class="summary-sig-default">1000</span>,
+        <span class="summary-sig-arg">delay_response</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">loop</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">reverse</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">control_button</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">text_margin</span>=<span class="summary-sig-default">5</span>,
+        <span class="summary-sig-arg">text_paste</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">event</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Control Object: Define panel control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_control_image"></a><span class="summary-sig-name">set_control_image</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control_image</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set image of control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_color"></a><span class="summary-sig-name">set_color</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">activated_color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fill</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set control color.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_list"></a><span class="summary-sig-name">set_list</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control_list</span>,
+        <span class="summary-sig-arg">icon_list</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">icon_size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">case</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">append</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">keep_link</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">keep_tip</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Set control listing of a control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_list_icon"></a><span class="summary-sig-name">set_list_icon</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control_list</span>,
+        <span class="summary-sig-arg">icon_list</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_folder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">data_zip</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_obj</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">color_key</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">icon_size</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set control listing icon of a control, changing if item in listing or appending new item.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_list"></a><span class="summary-sig-name">get_list</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return control listing.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="remove_list"></a><span class="summary-sig-name">remove_list</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">items</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Remove specified items (or item at index) from control listing, including corresponding tips and links. Passing no parameter removes complete control list.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_label"></a><span class="summary-sig-name">set_label</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set control label.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_label"></a><span class="summary-sig-name">get_label</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get control label.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_tip"></a><span class="summary-sig-name">set_tip</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*tip</span>)</span><br />
+      Set tip for a control item. Parameters: tip: str or [] - single control tip or tip list for control list items; or tuple item:str,tip:str tip for control list item.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_tip"></a><span class="summary-sig-name">get_tip</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">item</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get the tip for a control item, or list of tips if no parameter given. Parameter: item:str</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_link"></a><span class="summary-sig-name">set_link</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">control</span>,
+        <span class="summary-sig-arg">link</span>)</span><br />
+      Set linked controls. Parameters: control:str, link:[].</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_link_activated"></a><span class="summary-sig-name">set_link_activated</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set whether linked control active immediately or upon control button activation.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_action"></a><span class="summary-sig-name">add_action</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">function</span>,
+        <span class="summary-sig-arg">obj</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Bind action function to control. Function should take two arguments, for instance Function(control, value), that will receive the control button pressed and control value. Optional obj argument to provide object for method binding in Pyjs -O mode.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_id"></a><span class="summary-sig-name">get_id</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get control identity</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_position"></a><span class="summary-sig-name">get_position</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve control position.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_size"></a><span class="summary-sig-name">get_size</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve control size.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_text_margin"></a><span class="summary-sig-name">set_text_margin</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">margin</span>)</span><br />
+      Set text margin. Parameter: margin int or (t,r,b,l).</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_text_margin"></a><span class="summary-sig-name">get_text_margin</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get text margin. Return [t,r,b,l].</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_activated"></a><span class="summary-sig-name">is_activated</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether control is activated.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_activated"></a><span class="summary-sig-name">set_activated</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set control activated.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_activated_lock"></a><span class="summary-sig-name">is_activated_lock</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check control activate lock.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_activated_lock"></a><span class="summary-sig-name">set_activated_lock</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set control activate lock.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_value"></a><span class="summary-sig-name">set_value</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">change_index</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Set the value of a control. Parameters: value - control value; change_index - True change list index to first available value, False to leave index position unchanged, index number for specific index if is value.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_value"></a><span class="summary-sig-name">get_value</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the value of a control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_list_index"></a><span class="summary-sig-name">set_list_index</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Set the place in control listing.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_list_index"></a><span class="summary-sig-name">get_list_index</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">item</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get the current place in control listing, or index of first occurrence of item.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_active"></a><span class="summary-sig-name">is_active</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether a control is active.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_active"></a><span class="summary-sig-name">set_active</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set control active setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_enabled"></a><span class="summary-sig-name">is_enabled</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Check whether control is enabled.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_enabled"></a><span class="summary-sig-name">set_enabled</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">setting</span>=<span class="summary-sig-default">'Toggle'</span>)</span><br />
+      Set control enabled setting.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="resize_control"></a><span class="summary-sig-name">resize_control</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>)</span><br />
+      Resize control.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_display_info"></a><span class="summary-sig-name">set_display_info</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>,
+        <span class="summary-sig-arg">font_color</span>,
+        <span class="summary-sig-arg">font_type</span>,
+        <span class="summary-sig-arg">font_size</span>,
+        <span class="summary-sig-arg">position</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">text</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">center</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Initiate control display text.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_display_text"></a><span class="summary-sig-name">set_display_text</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">font_color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_bgcolor</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_type</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">split_text</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">info</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Set display text properties.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_display_text"></a><span class="summary-sig-name">get_display_text</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get display text object.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_label_info"></a><span class="summary-sig-name">set_label_info</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>,
+        <span class="summary-sig-arg">font_color</span>,
+        <span class="summary-sig-arg">font_type</span>,
+        <span class="summary-sig-arg">font_size</span>,
+        <span class="summary-sig-arg">position</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">text</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initiate control label text.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_label_text"></a><span class="summary-sig-name">set_label_text</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">font_color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_bgcolor</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_type</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">font_size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">split_text</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set label text properties.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="check_link"></a><span class="summary-sig-name">check_link</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ctrl</span>,
+        <span class="summary-sig-arg">activate</span>)</span><br />
+      Maintain active state of linked controls.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="reset"></a><span class="summary-sig-name">reset</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">change_index</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Reset value to start of control list.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="next"></a><span class="summary-sig-name">next</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set value to next in control list.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="previous"></a><span class="summary-sig-name">previous</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set value to previous in control list.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">panel</span>,
+        <span class="sig-arg">identity</span>,
+        <span class="sig-arg">control_type</span>,
+        <span class="sig-arg">position</span>,
+        <span class="sig-arg">size</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default">(40,80,120)</span>,
+        <span class="sig-arg">fill</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">control_outline</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">control_image</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">font_color</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">font_type</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">font_size</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">split_text</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">center_text</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">control_list</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">icon_list</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">icon_size</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">tip_list</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">link</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">link_activated</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">activated_color</span>=<span class="sig-default">(0,120,160)</span>,
+        <span class="sig-arg">activated_toggle</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">label</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">label_display</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">active</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">control_response</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">hold_response</span>=<span class="sig-default">1000</span>,
+        <span class="sig-arg">delay_response</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">loop</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">reverse</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">control_button</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">text_margin</span>=<span class="sig-default">5</span>,
+        <span class="sig-arg">text_paste</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">event</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Control Object: Define panel control.
+
+Parameters:
+panel: obj panel holding control.
+    - automatically set by panel add() method.
+identity: 'id' control name.
+control_type: 'type' control type.
+    - 'function_select', 'function_toggle': master control.
+    - 'control_select', 'control_toggle': standard control.
+    - 'label': label control.
+    - 'textbox': textbox control.
+position: (x,y) control placement on panel. Values &lt; 1 are %panel.
+Optional parameters &lt;default&gt;:
+size: (w,h) control size override panel specified &lt;None&gt;.
+    - 'auto', 'auto_width': fit items.
+    - 'min', 'min_width': fit using control_minsize.
+    - 'panel': use exact control_minsize.
+color: (r,g,b) control color &lt;(40,80,120)&gt;.
+fill: int button edge width, and 0 filled -1 none &lt;1&gt;.
+control_outline: display control edge &lt;None&gt;.
+control_image: 'image' control background image overrides panel &lt;None&gt;.
+    - 'none' suppress image.
+    - Image in data folder.
+font_color: (r,g,b) font color. Overrides panel &lt;None&gt;.
+font_type: [] font type list. Overrides panel &lt;None&gt;.
+font_size: int font size. Overrides panel &lt;None&gt;.
+split_text: bool split text at space to new line &lt;True&gt;.
+control_list: [] list held by control &lt;None&gt;.
+    - numeric: [0] '__numeric', [1] (start,stop,step).
+    - alpha: [0] '__alpha', [1] 'upper','lower','mixed'.
+    - alphanumeric: [0] '__alphanumeric' in list[0], [1] 'upper','lower','mixed'.
+    - filelist: [0] '__filelist', [1] path, [2] root, [3] ext.
+    - 'item': Value listing. Leading '__' not display or display available icon.
+icon_list: [] control icons &lt;None&gt;.
+    - replace '__item' in control_list - separate images or a composite image.
+icon_size: (w,h) control icon size &lt;None&gt;.
+    - values &lt; 1 are %control size.
+    - default use control size.
+tip_list: [] tip list - single tip or multiple tip list &lt;None&gt;.
+link: [] function control link to activate other controls &lt;None&gt;.
+link_activated: bool function control link activated &lt;True&gt;.
+activated_color: (r,g,b) highlight color of activated control &lt;(0,120,160)&gt;.
+activated_toggle: bool control activated toggle &lt;True&gt;.
+    - 'lock' for activate lock.
+label: '' supply label to replace 'id' text &lt;None&gt;.
+label_display: bool control label displayed &lt;True&gt;.
+active: bool control active state &lt;True&gt;.
+control_response: int control response (ms). Overrides panel &lt;None&gt;.
+    - 0 no response repeat.
+hold_response: int hold (ms) before control response quicken &lt;1000&gt;.
+    - 0 no response change.
+delay_response: int initial delay (ms) before control response &lt;0&gt;.
+loop: bool option list loop &lt;False&gt;.
+reverse: bool control switches reversed &lt;False&gt;.
+control_button: bool control switches displayed &lt;True&gt;.
+center_text: bool control text centered &lt;True&gt;.
+text_margin: int or (t,r,b,l) textbox margin &lt;5&gt;.
+text_paste: bool textbox copy/paste function &lt;False&gt;.
+event: bool interaction generates events. Overrides panel &lt;None&gt;.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="interphase-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/interphase" target="_top">Interphase Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 30 23:22:56 2021
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

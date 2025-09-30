@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjsdl.surface.Surface</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjsdl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/pyjsdl-ts" target="_top">Pyjsdl Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjsdl-module.html">Package&nbsp;pyjsdl</a> ::
+        <a href="pyjsdl.surface-module.html">Module&nbsp;surface</a> ::
+        Class&nbsp;Surface
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Surface</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+ <a href="pyjsdl.pyjsobj.Element-class.html">pyjsobj.Element</a> --+        
+                   |        
+<a href="pyjsdl.pyjsobj.FocusElement-class.html">pyjsobj.FocusElement</a> --+    
+                       |    
+     <a href="pyjsdl.pyjsobj.HTML5Canvas-class.html">pyjsobj.HTML5Canvas</a> --+
+                           |
+                          <strong class="uidshort">Surface</strong>
+</pre>
+
+<hr />
+<p><strong>pyjsdl.Surface</strong></p>
+<ul class="rst-simple">
+<li>Surface.get_size</li>
+<li>Surface.get_width</li>
+<li>Surface.get_height</li>
+<li>Surface.get_rect</li>
+<li>Surface.resize</li>
+<li>Surface.copy</li>
+<li>Surface.subsurface</li>
+<li>Surface.getSubimage</li>
+<li>Surface.blit</li>
+<li>Surface.set_colorkey</li>
+<li>Surface.get_colorkey</li>
+<li>Surface.replace_color</li>
+<li>Surface.get_at</li>
+<li>Surface.set_at</li>
+<li>Surface.fill</li>
+<li>Surface.get_parent</li>
+<li>Surface.get_offset</li>
+<li>Surface.toDataURL</li>
+</ul>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjsdl.surface.Surface-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Return Surface subclassed from a Canvas implementation.
+The size argument is the dimension (w,h) of surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__str__"></a><span class="summary-sig-name">__str__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__repr__"></a><span class="summary-sig-name">__repr__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_size"></a><span class="summary-sig-name">get_size</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return width and height of surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_width"></a><span class="summary-sig-name">get_width</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return width of surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_height"></a><span class="summary-sig-name">get_height</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return height of surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjsdl.surface.Surface-class.html#resize" class="summary-sig-name">resize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">height</span>)</span><br />
+      Resize surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_rect"></a><span class="summary-sig-name">get_rect</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**attr</span>)</span><br />
+      Return rect of the surface.
+An optional keyword argument of the rect position.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return Surface that is a copy of this surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="subsurface"></a><span class="summary-sig-name">subsurface</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rect</span>)</span><br />
+      Return Surface that represents a subsurface.
+The rect argument is the area of the subsurface.
+Argument can be 't'/'f' for data sync to/from subsurface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getSubimage"></a><span class="summary-sig-name">getSubimage</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">height</span>)</span><br />
+      Return subimage of Surface.
+Arguments include x, y, width, and height of the subimage.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="blit"></a><span class="summary-sig-name">blit</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">surface</span>,
+        <span class="summary-sig-arg">position</span>,
+        <span class="summary-sig-arg">area</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Draw given surface on this surface at position.
+Optional area delimitates the region of given surface to draw.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_colorkey"></a><span class="summary-sig-name">set_colorkey</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>,
+        <span class="summary-sig-arg">flags</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set surface colorkey.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_colorkey"></a><span class="summary-sig-name">get_colorkey</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return surface colorkey.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="replace_color"></a><span class="summary-sig-name">replace_color</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>,
+        <span class="summary-sig-arg">new_color</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Replace color with with new_color or with alpha.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_at"></a><span class="summary-sig-name">get_at</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pos</span>)</span><br />
+      Get color of a surface pixel. The pos argument represents x,y position of pixel.
+Return color (r,g,b,a) of a surface pixel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_at"></a><span class="summary-sig-name">set_at</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pos</span>,
+        <span class="summary-sig-arg">color</span>)</span><br />
+      Set color of a surface pixel.
+The arguments represent position x,y and color of pixel.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjsdl.surface.Surface-class.html#fill" class="summary-sig-name">fill</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rect</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Fill surface with color.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_parent"></a><span class="summary-sig-name">get_parent</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return parent Surface of subsurface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_offset"></a><span class="summary-sig-name">get_offset</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return offset of subsurface in surface.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjsdl.surface.Surface-class.html#toDataURL" class="summary-sig-name">toDataURL</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datatype</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return surface data as a base64 data string.
+Optional datatype to set data format, default to 'image/png'.
+Implemented with HTML5 Canvas toDataURL method.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html">pyjsobj.HTML5Canvas</a></code></b>:
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#arc">arc</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#beginPath">beginPath</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#clear">clear</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#closePath">closePath</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#drawImage">drawImage</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#fillRect">fillRect</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#fillText">fillText</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#getContext">getContext</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#getElement">getElement</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#getImageData">getImageData</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#lineTo">lineTo</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#measureText">measureText</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#moveTo">moveTo</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#putImageData">putImageData</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#restoreContext">restoreContext</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#rotate">rotate</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#saveContext">saveContext</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#scale">scale</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setFillStyle">setFillStyle</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setFont">setFont</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setLineWidth">setLineWidth</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setStrokeStyle">setStrokeStyle</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setTextAlign">setTextAlign</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#setTextBaseline">setTextBaseline</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#stroke">stroke</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#strokeRect">strokeRect</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#strokeText">strokeText</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#toBlob">toBlob</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#transform">transform</a></code>,
+      <code><a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#translate">translate</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjsdl.pyjsobj.FocusElement-class.html">pyjsobj.FocusElement</a></code></b>:
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#addFocusListener">addFocusListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#addKeyEventListener">addKeyEventListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#addKeyboardListener">addKeyboardListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#addMouseListener">addMouseListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#blur">blur</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#focus">focus</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onBlur">onBlur</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onFocus">onFocus</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onKeyDown">onKeyDown</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onKeyPress">onKeyPress</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onKeyUp">onKeyUp</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseDown">onMouseDown</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseEnter">onMouseEnter</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseLeave">onMouseLeave</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseMove">onMouseMove</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseUp">onMouseUp</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onMouseWheel">onMouseWheel</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onTouchCancel">onTouchCancel</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onTouchEnd">onTouchEnd</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onTouchInitiate">onTouchInitiate</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onTouchMove">onTouchMove</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#onTouchStart">onTouchStart</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#removeKeyEventListener">removeKeyEventListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.FocusElement-class.html#sinkEvents">sinkEvents</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjsdl.pyjsobj.Element-class.html">pyjsobj.Element</a></code></b>:
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#addEventListener">addEventListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#appendChild">appendChild</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#click">click</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getAttribute">getAttribute</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getAttributes">getAttributes</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getBoundingClientRect">getBoundingClientRect</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getClientHeight">getClientHeight</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getClientLeft">getClientLeft</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getClientTop">getClientTop</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getClientWidth">getClientWidth</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getID">getID</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getMouseWheelEventType">getMouseWheelEventType</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getScrollHeight">getScrollHeight</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getScrollLeft">getScrollLeft</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getScrollTop">getScrollTop</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getScrollWidth">getScrollWidth</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getStyle">getStyle</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#getTitle">getTitle</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#removeChild">removeChild</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#removeEventListener">removeEventListener</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setAttribute">setAttribute</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setElement">setElement</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setHeight">setHeight</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setID">setID</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setSize">setSize</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setTitle">setTitle</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#setWidth">setWidth</a></code>,
+      <code><a href="pyjsdl.pyjsobj.Element-class.html#style">style</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">size</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return Surface subclassed from a Canvas implementation.
+The size argument is the dimension (w,h) of surface.</p>
+<p>Module initialization places pyjsdl.Surface in module's namespace.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjsdl.pyjsobj.Element-class.html#__init__">pyjsobj.Element.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="resize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">resize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">width</span>,
+        <span class="sig-arg">height</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  Resize surface.
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#resize">pyjsobj.HTML5Canvas.resize</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fill"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fill</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rect</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  Fill surface with color.
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#fill">pyjsobj.HTML5Canvas.fill</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="toDataURL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">toDataURL</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datatype</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  Return surface data as a base64 data string.
+Optional datatype to set data format, default to 'image/png'.
+Implemented with HTML5 Canvas toDataURL method.
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjsdl.pyjsobj.HTML5Canvas-class.html#toDataURL">pyjsobj.HTML5Canvas.toDataURL</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjsdl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://gatc.ca/projects/pyjsdl-ts" target="_top">Pyjsdl Module</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  4 18:31:58 2021
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

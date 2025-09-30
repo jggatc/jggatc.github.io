@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Guide to Pyjs and Pyjsdl - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+
+<link rel="canonical" href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">
+
+        <meta name="author" content="Jim" />
+        <meta name="keywords" content="html5 canvas,javascript,pygame,pyjs,pyjsdl,python" />
+        <meta name="description" content="These notes provide instructions on the use of Pyjs with Pyjsdl, which were tested on Linux and Win7 systems." />
+
+        <meta property="og:site_name" content="GATC" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Guide to Pyjs and Pyjsdl"/>
+        <meta property="og:url" content="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/"/>
+        <meta property="og:description" content="These notes provide instructions on the use of Pyjs with Pyjsdl, which were tested on Linux and Win7 systems."/>
+        <meta property="article:published_time" content="2014-11-16" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content="html5 canvas" />
+            <meta property="article:tag" content="javascript" />
+            <meta property="article:tag" content="pygame" />
+            <meta property="article:tag" content="pyjs" />
+            <meta property="article:tag" content="pyjsdl" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:author" content="Jim" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+        <link href="https://jggatc.github.io/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
+              title="GATC Programming ATOM Feed"/>
+
+    
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://jggatc.github.io/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
+                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
+                    <li><a href="https://jggatc.github.io/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/"
+                       rel="bookmark"
+                       title="Permalink to Guide to Pyjs and Pyjsdl">
+                        Guide to Pyjs and Pyjsdl
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-11-16T03:35:00-05:00"> Sun 16 November 2014</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://jggatc.github.io/tag/html5-canvas.html">html5 canvas</a>
+        /
+	<a href="https://jggatc.github.io/tag/javascript.html">javascript</a>
+        /
+	<a href="https://jggatc.github.io/tag/pygame.html">pygame</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjs.html">pyjs</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjsdl.html">pyjsdl</a>
+        /
+	<a href="https://jggatc.github.io/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>These notes provide instructions on the use of <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs</a> with <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>, which were tested on Linux and Win7 systems.</p>
+<p>Installation of Pyjs 0.8.1-dev is required, currently available from <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs Github repository</a>. Check <a class="reference external" href="https://github.com/pyjs/pyjs/wiki/GettingStarted">instruction</a> on Pyjs Github site.</p>
+<p>The tools required for installation are <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a> and <a class="reference external" href="https://git-scm.com">git</a>, install tools if necessary from package manager (Linux) or follow install instructions on tools Webpage (Win7).
+Linux:
+sudo apt-get install python-pip
+sudo apt-get install git</p>
+<p>Command to install Pyjs with pip:
+Linux system install:
+sudo pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+Linux local install:
+pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs --user
+Win7:
+pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs</p>
+<p>With Pyjs installed, pyjsbuild had error 'pkg_resources.DistributionNotFound: six', resolved after Pyjs install by upgrading <a class="reference external" href="https://pypi.python.org/pypi/six">Six</a> dependency:
+pip show six (upgrade version 1.3 to 1.8)
+Linux:
+sudo pip install six --upgrade
+Win7:
+easy_install --upgrade six</p>
+<p>Command to show information of Pyjs installed by pip:
+pip show pyjs
+&gt;
+Linux information:
+Location: /local/lib/python2.7/site-packages/
+Win7 information:
+Location: \python27\lib\site-packages</p>
+<p>Location of pyjsbuild and pyjscompressor:
+Linux:
+/local/bin/
+Win7:
+\python27\scripts
+Refer to these scripts with system path, instances below are in Linux.</p>
+<p>To get HTML5 Canvas to work with IE9+, modify Pyjs as described in pyjsdl/guide.txt:
+Use files in pyjs_changes.zip/git-140806 to modify or overwrite the following files:
+Linux change:
+/local/lib/python2.7/site-packages/pyjs/browser.py
+/local/lib/python2.7/site-packages/pyjs/boilerplate/home.nocache.html
+Win7 change:
+\python27\lib\site-packages\pyjs\browser.py
+\python27\lib\site-packages\pyjs\boilerplate\home.nocache.html</p>
+<p>Use pyjsbuild to compile, check 'pyjsbuild --help' for command options. Use compile options -S (strict mode), -O (optimise mode), and -d (debug). Use of --dynamic-link option links JavaScript files in lib folder, decreasing size of browser specific HTML files and permitting shared lib folder with multiple demo apps. Use the -o option to build to separate output folder for different option set. To test installed Pyjs, compile an app from Pyjs examples, which can be downloaded from <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs Github repository</a>. Not all examples work, but tested the following:</p>
+<p><a class="reference external" href="/apps/pyjs_demo/Hello.html">Helloworld App</a>
+change to folder /examples/helloworld
+/local/bin/pyjsbuild -S Hello.py --dynamic-link -o output</p>
+<p><a class="reference external" href="/apps/pyjs_demo/GWTCanvasDemo.html">GWTCanvas App</a>
+change to folder /examples/gwtcanvas
+/local/bin/pyjsbuild -S GWTCanvasDemo.py --dynamic-link -o output</p>
+<p>Compile a Pyjsdl demo with Pyjs and Pyjsdl, download <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">demo app</a> and unpack. Download <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> and unpack, placing Pyjsdl folder in the demo app folder. Compile the script with the command:
+/local/bin/pyjsbuild -O serpentduel.py --dynamic-link -o output
+Following build, place data folder containing images in output folder.
+Tested by opening app.html in Firefox, IE, and Chrome.
+To open local files, launch Chrome with the <a class="reference external" href="https://www.chromium.org/developers/how-tos/run-chromium-with-flags">option</a> --allow-file-access-from-files
+Can use a local server, such as <a class="reference external" href="https://docs.python.org/2/library/simplehttpserver.html">SimpleHTTPServer</a> with command:
+python -m SimpleHTTPServer 8000
+Server root folder is where command was run, use browser at <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> to browse to HTML file to load.</p>
+<p>Use pyjscompressor to compress JavaScript in output folder with command:
+python /local/bin/pyjscompressor output
+Pyjscompressor uses <a class="reference external" href="https://code.google.com/p/closure-compiler/">Closure Compiler</a>, can download latest release and use:
+python /local/bin/pyjscompressor output -c compiler.jar
+Pyjscompressor did not work in Pyjs build 140806, with 'ImportError: No module named contrib.pyjscompressor', due to missing files apparently left out during installation. Resolved by downloading Pyjs from <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs Github repository</a>, and copy missing files from /pyjs/contrib/ to /local/lib/python2.7/site-packages/pyjs/contrib/ (Linux) or \python27\lib\site-packages\pyjs\contrib\ (Win7).</p>
+<p>Following compilation with pyjsbuild and optional compression with pyjscompressor, the output folder containing the app can be deployed to a Web server.</p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
+
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+        </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 JG
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/#"}>Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+
+    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+
+
+
+</body>
+</html>

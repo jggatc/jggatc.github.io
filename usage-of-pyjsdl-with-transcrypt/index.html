@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Usage of Pyjsdl with Transcrypt - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+
+<link rel="canonical" href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">
+
+        <meta name="author" content="Jim" />
+        <meta name="keywords" content="javascript,pygame,pyjsdl,pyjsdl-ts,python,transcrypt" />
+        <meta name="description" content="The Pyjsdl library in the Pyjsdl-ts package is a port of Pyjsdl to work with Transcrypt. Pyjsdl permit scripts coded in Python/Pygame to compile to JavaScript for online deployment. Pyjsdl is modelled on the Pygame commands that wraps JavaScript API providing the multimedia functionality. The post describes the process …" />
+
+        <meta property="og:site_name" content="GATC" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Usage of Pyjsdl with Transcrypt"/>
+        <meta property="og:url" content="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/"/>
+        <meta property="og:description" content="The Pyjsdl library in the Pyjsdl-ts package is a port of Pyjsdl to work with Transcrypt. Pyjsdl permit scripts coded in Python/Pygame to compile to JavaScript for online deployment. Pyjsdl is modelled on the Pygame commands that wraps JavaScript API providing the multimedia functionality. The post describes the process …"/>
+        <meta property="article:published_time" content="2021-12-05" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content="javascript" />
+            <meta property="article:tag" content="pygame" />
+            <meta property="article:tag" content="pyjsdl" />
+            <meta property="article:tag" content="pyjsdl-ts" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="transcrypt" />
+            <meta property="article:author" content="Jim" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+        <link href="https://jggatc.github.io/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
+              title="GATC Programming ATOM Feed"/>
+
+    
+        <base href="https://jggatc.github.io/apps/pyjsdl-ts/draw-pad-post-app/">
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://jggatc.github.io/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
+                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
+                    <li><a href="https://jggatc.github.io/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/"
+                       rel="bookmark"
+                       title="Permalink to Usage of Pyjsdl with Transcrypt">
+                        Usage of Pyjsdl with Transcrypt
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2021-12-05T02:26:00-05:00"> Sun 05 December 2021</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://jggatc.github.io/tag/javascript.html">javascript</a>
+        /
+	<a href="https://jggatc.github.io/tag/pygame.html">pygame</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjsdl.html">pyjsdl</a>
+        /
+	<a href="https://jggatc.github.io/tag/pyjsdl-ts.html">pyjsdl-ts</a>
+        /
+	<a href="https://jggatc.github.io/tag/python.html">python</a>
+        /
+	<a href="https://jggatc.github.io/tag/transcrypt.html">transcrypt</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>The <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl</a> library in the <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a> package is a port of <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> to work with <a class="reference external" href="https://www.transcrypt.org/">Transcrypt</a>. Pyjsdl permit scripts coded in <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> to compile to JavaScript for online deployment. Pyjsdl is modelled on the Pygame commands that wraps JavaScript API providing the multimedia functionality. The post describes the process to convert the <a class="reference external" href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a> script to an app for online deployment.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class='jsapp' id='app-draw-pad' style='width:31.25em';>
+    <div id='__panel__'></div>
+    <script type='module' src='/apps/pyjsdl-ts/draw-pad-post-app/__target__/run_app.js'></script>
+    <script src='/apps/pyjsdl-ts/draw-pad-post-app/lib/prism.js'></script>
+    <link href='/apps/pyjsdl-ts/draw-pad-post-app/lib/prism.css' rel='stylesheet' />
+</div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The Draw Pad app was compiled to JavaScript with Transcrypt, the Python code of the script is in the textbox. The textbox was also coded in Python and converted to JavaScript with Transcrypt and uses the <a class="reference external" href="https://prismjs.com/">Prism</a> JavaScript library syntax highlighter.</p>
+<p>For development the following tools are required. Python&nbsp;3 is required, while Pygame is optional for running on the desktop. The Pyjsdl-ts package must be <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl-ts/">downloaded</a> and the pyjsdl folder placed in the script's folder or on its path. Pyjsdl is coded in Python and will be converted to JavaScript during the compile process. The final requirement is <a class="reference external" href="https://www.transcrypt.org/docs/html/installation_use.html">Transcrypt installation</a>. Transcrypt is a Python-to-JavaScript compiler/transpiler and can be installed with the command:</p>
+<div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>transcrypt
+</pre></div>
+<p>It may be preferable to install in a virtual environment:</p>
+<div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+<span class="nb">source</span><span class="w"> </span>env/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>setuptools<span class="w"> </span>wheel
+pip<span class="w"> </span>install<span class="w"> </span>transcrypt
+</pre></div>
+<p>When developing with Transcrypt in the virtual environment, use the following command in the folder the environment was set to initiate the environment:</p>
+<div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>env/bin/activate
+</pre></div>
+<p>The script can be developed under Python/Pygame. Once the script is working properly, some code changes are necessary to function with Pyjsdl. Pyjsdl has a substantial portion of Pygame functionality using a similar <a class="reference external" href="https://jggatc.github.io/docs/pyjsdl-ts">API</a>. If you prefer to continue with desktop execution, the code can be tested with <a class="reference external" href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a> that is the original library from which Pyjsdl was ported and has similar functionality. The Drawing Pad was initially developed with Python/Pygame and checked with Jython/PyJ2D.</p>
+<p>Code changes are necessary due to functionality differences in either Pyjsdl, Transcrypt, or the web browser. Much of this content applies to conventional JavaScript applications, which is the goal even though we program with Python and Pyjsdl. To expose Pyjsdl API to the script, the library is imported:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyjsdl</span>
+</pre></div>
+<p>The design intention of Pyjsdl was the replacement of Pygame functionality in the web browser so to permit Python/Pygame programs to be deployed online. Such an import would not permit the program to be developed and run under Pygame. Due to similarity of the API of Pygame and Pyjsdl, to allow the program to interoperate between the two environments the usual mechanism is to rebind the imports with a common name, thereby maintain functionality of the API statements. With this goal, the import statement that rebinds Pygame, for instance 'pg' that is usual for Pygame programs would be:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
+</pre></div>
+<p>should be changed to import Pyjsdl to replace Pygame by rebinding to the common name:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyjsdl</span> <span class="k">as</span> <span class="nn">pg</span>
+</pre></div>
+<p>The Draw Pad script is coded to permit it to execute either on the desktop or in the web browser. To do so, it uses conditional import statements that will import the correct library under various environments. In this manner it not only opens up the possibility of online deployment but maintains its ability to be developed and executed on the desktop.</p>
+<p>The other crucial change is the script's main loop. Since the JavaScript environment of web browsers are single threaded, any loop of long duration will freeze the app. Typically, JavaScript programs use callback functions for iteration. Since Python code does not wait at a particular statement, code changes are necessary. The crucial concern is the main program loop that iterates the execution of the app frames, for instance:</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+<p>needs to be replaced with the Pyjsdl equivalence, using its 'pyjsdl.setup' function:</p>
+<div class="highlight"><pre><span></span><span class="n">pyjsdl</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
+</pre></div>
+<p>The 'pyjsdl.setup' statement provides Pyjsdl with a callback, in this case the 'run' function, to execute repeatedly after each frame is displayed. The display is updated repeatedly by the web browser through a display refresh callback function, typically 60 fps dependant on processing load. The callback function provided by the 'pyjsdl.setup' statement hooks into this iteration. The 'pyjsdl.setup' function is unique to Pyjsdl API not present in Pygame, therefore to permit the program to operate under the different environment it requires to be under conditional execution. With Draw Pad, the conditional import of Pyjsdl or Pygame is registered in a variable 'platform', which can be used for conditional execution. By examining Draw Pad code, with conditional import and rebinding to 'pg', there is a conditional execution dependent on platform either the main 'while' loop or 'pg.setup'. Registering a variable such as 'platform' is advisable if there are any other statements that requires conditional execution due to differences in the operating environment.</p>
+<p>Another concern is image load at which the Python script expects the loading process to occur immediately before processing the next statement, while the web browser requires to retrieve the image file from a server and cannot wait as this would lock the app execution. To overcome this obstacle, the image download is performed asynchronously using an internal callback. This is achieved used a preloading of the images prior to the main callback being executed, using the statement:</p>
+<div class="highlight"><pre><span></span><span class="n">pyjsdl</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">run</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;./data/brush.png&#39;</span><span class="p">]</span>
+</pre></div>
+<p>The statement's second argument is a list of images to preload. With this accomplished, subsequent 'image.load' methods in the script will retrieve the image resident in memory. Pyjsdl requires the display to be initiated prior to preloading images, which probably should be revised. Therefore call 'display.set_mode' method prior to running the 'pyjsdl.setup' requiring image preloading. To pass variables to callback functions use global variables, for instance, the 'display' variable returned from 'display.set_mode' should be set as 'global display' in the function and there should be 'display=None' in the global scope.</p>
+<p>Another option for the 'pyjsdl.setup' statement is that it can be chained and passed new callback functions. It may be appropriate to use the 'pyjsdl.set_callback' if just changing callback. Passing new callbacks will change the callback hooked into the web browser iteration. For instance:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="n">prg</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">pre_run</span><span class="p">():</span>
+    <span class="n">pyjsdl</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
+    <span class="n">pyjsdl</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">pre_run</span><span class="p">)</span>
+</pre></div>
+<p>An alternative option for 'pyjsdl.setup' to avoid use of global variables is to pass an object with a 'run' method as done with Draw Pad, the 'run' method will be used as the callback. For instance:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">App</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">prg</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
+        <span class="n">pyjsdl</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+<p>This covers the crucial code changes. There may be a few other code changes necessary due to the nature of the web browser. For instance time.wait will not function as it would also lock the app execution, use a variable to check the pause state, change the main callback with 'pyjsdl.setup', or use time.set_timeout with a callback function for the web browser to schedule.</p>
+<p>The final concern is to compile Python to JavaScript. Transcrypt compiles Python&nbsp;3 syntax. It compiles Python code to clean, concise, and efficient JavaScript code. At this stage of development the web browser is used for testing. The web browser's development console will provide messages, Transcrypt outputs print statements and exception errors to the console. To ensure code changes are reflected in the JavaScript code, development console settings have an option to disable cache when open.</p>
+<p>Transcrypt translates with a close coupling of Python objects to equivalent JavaScript objects, for instance internally a Python list is translated to a JavaScript array with a thin layer to provide Python functionality. For efficiency, some of the JavaScript restrictions are apparent. Browse the Transcrypt <a class="reference external" href="https://www.transcrypt.org/documentation/">documentation</a> for detail information. For instance, you cannot iterate through a Python dict as:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">adict</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+<p>This would requiring continuous checking and calling Python special methods at the expense of efficiency. Rather Transcrypt requires the code change to an explicit statement:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">adict</span><span class="o">.</span><span class="n">key</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+<p>Another such difference are Python object truth value statements. For instance Python return False for an empty lists:</p>
+<div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="n">alist</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+<p>For efficiency, Transcrypt requires an explicit statement in such cases:</p>
+<div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+<p>Transcrypt provides mechanisms to have these functionality at the expense of performance and size of the generated JavaScript code. Transcrypt compile program has command-line options to offer these functionality, but these compilation switches have impact on the performance of the whole program. For instance -i will permit implicit dictionary iteration. These command-line options are discouraged due to impact on performance. A preferable route is to use Transcrypt's pragma mechanism to locally provide the functionality required:</p>
+<div class="highlight"><pre><span></span><span class="c1"># __pragma__ (&#39;iconv&#39;)</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">adict</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="c1"># __pragma__ (&#39;noiconv&#39;)</span>
+</pre></div>
+<p>For development you can use a number of initial pragma statements at the start of the script and then eliminate with alternative code statements or restrict pragma to a limited number of statements that will not impact the performance of the entire program.</p>
+<p>Draw Pad uses limited pragma statements, for instance rather than using a pragma the change to adict.keys in iteration statements is sufficient. Pragma statements have various forms, refer to Transcrypt <a class="reference external" href="https://www.transcrypt.org/documentation/">documentation</a>. In my opinion the preferable form is '# __pragma__' that permits pragma statements that are recognized by Transcrypt but does not affect the script execution with Python as it is in syntax a comment statement. Draw Pad script uses a single pragma statement:</p>
+<div class="highlight"><pre><span></span><span class="c1"># __pragma__ (&#39;skip&#39;)</span>
+    <span class="o">&lt;</span><span class="n">statements</span><span class="o">&gt;</span>
+<span class="c1"># __pragma__ (&#39;noskip&#39;)</span>
+</pre></div>
+<p>This pragma statement instructs Transcrypt to skip the intervening code. Referring to Draw Pad code, the import statements provide imports for the various environments: desktop, JVM, or JavaScript. Transcrypt process the import mechanism at compile time and the missing libraries will lead to compilation errors. The import of pyjsdl in the intervening skip pragma statements is for the former <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> library. Using this pragma statement, these import statements are ignored, and the variable 'platform' remains 'None', at which point Transcrypt will process the import of pyjsdl from the Pyjsdl-ts package.</p>
+<p>This covers much of the intricacies with using Pyjsdl. The remaining step is Transcrypt compilation of the Python script to JavaScript:</p>
+<div class="highlight"><pre><span></span>transcrypt<span class="w"> </span>-n<span class="w"> </span>draw_pad.py
+</pre></div>
+<p>The -n option is to avoid JavaScript minification, which requires JVM installed and only necessary when online deployment in a production setting. If the compile step passes, the JavaScript code can be executed. By default, Transcrypt compiles the Python script to JavaScript in the __target__ folder. The folder contains the JavaScript files for the script along with the imports, including the pyjsdl library that is predominately coded in Python and therefore is compiled, and Transcrypt core. The __target__ folder along with media file folder is all that is required to deploy online, besides a main HTML file to retrieve the JavaScript app, for instance Drawing Pad has draw_pad.html in the root folder of the script:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:black&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;__panel__&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;module&#39;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;__target__/draw_pad.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+<p>The important statements are the '&lt;script&gt;' with 'src' set to the location of the main app JavaScript file, in this case to 'draw_pad.js', and the '&lt;div id=&quot;__panel__&quot;&gt;&lt;/div&gt;' in which Pyjsdl inserts the canvas display.</p>
+<p>At this point the JavaScript app can run in the web browser. To run, it must be launched by the web browser from a web server. You can launch the app from a local server:</p>
+<div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>http.server
+</pre></div>
+<p>From the web browser, browser to localhost:8000 or the local IP, then launch the app form the main HTML file. Use the local server for development, if changes are required, edit the Python script and rerun the transcrypt command to reflect changes in the JavaScript code.</p>
+<p>After development, the app can be uploaded to a web server for online deployment. To embed the app into a web page, the following HTML statement is added at the desired placement, for instance with Draw Pad:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;draw-pad&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;position:relative; left:50px;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://&lt;server_path&gt;/draw_pad.html&quot;</span>
+        <span class="na">marginwidth</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">marginheight</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">hspace</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">vspace</span><span class="o">=</span><span class="s">&quot;0&quot;</span>
+        <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;500&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>The app is now deployed online.</p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
+
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+        </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 JG
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/#"}>Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+
+    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+
+
+
+</body>
+</html>

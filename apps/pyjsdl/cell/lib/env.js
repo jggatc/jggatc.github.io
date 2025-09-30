@@ -1,0 +1,1 @@
+$pyjs.loaded_modules.env=function(b){if($pyjs.loaded_modules.env.__was_initialized__)return $pyjs.loaded_modules.env;var a=$pyjs.loaded_modules.env;a.__repr__=function(){return"<module: env>"};a.__was_initialized__=!0;if(null===b||"undefined"==typeof b)b="env";a.__name__=b;a.engine=null;a["interface"]=null;a.platform=null;a.size=null;a.color0=null;a.color1=null;return this};

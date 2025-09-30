@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Interphase Version History - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+
+<link rel="canonical" href="https://jggatc.github.io/projects/interphase/versions/">
+
+        <meta name="author" content="Jim" />
+
+    <meta property="og:site_name" content="GATC" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Interphase Version History"/>
+    <meta property="og:url" content="https://jggatc.github.io/projects/interphase/versions/"/>
+    <meta property="og:description" content="" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+
+
+    
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://jggatc.github.io/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
+                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
+                    <li><a href="https://jggatc.github.io/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Interphase Version History</h1>
+        
+        <div class="entry-content">
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="interphase-pygame-gui-module">
+<h2><a class="reference external" href="https://jggatc.github.io/projects/interphase/">Interphase</a> Pygame GUI Module</h2>
+</div>
+<div class="section" id="current-version-0-88">
+<h2>Current Version: 0.88</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="section-1">
+<h3>0.88 2019-04-06</h3>
+<ul class="simple">
+<li>update interface to address issue in move method when get_fps return zero.</li>
+<li>add interface.is_panel_display to check panel controls displayed.</li>
+<li>update interface.set_panel_display to ensure display updates.</li>
+<li>update interface.move to properly access panel size.</li>
+<li>revise with absolute import statements.</li>
+<li>revise module structure.</li>
+<li>update for python 2/3 compatibility.</li>
+<li>add touch event support when using Pyjsdl.</li>
+<li>update interface move method to utilize timed rate.</li>
+<li>update control response for no repeat option.</li>
+<li>update module for alternate framework.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-2">
+<h3>0.87 2015-04-12</h3>
+<ul class="simple">
+<li>update Text.tprint to use rendered character cache.</li>
+<li>refactor module to isolate framework.</li>
+<li>update module for alternate framework, can use Pygame, PyJ2D, or Pyjsdl.</li>
+<li>add interphase.init and interphase.get_init to initialize module.</li>
+<li>add textbox clipboard functionality for PyJ2D and Pyjsdl via pyjsdl.display.textarea.</li>
+<li>update textbox.get_text to properly return text.</li>
+<li>update interface to maintain control hold if pointer moves off control.</li>
+<li>add interface process_event and get_event_queue methods.</li>
+<li>add scroll wheel functionality, activated with interface parameter scroll_button.</li>
+<li>update scroll config for numeric control.</li>
+<li>update interface scroll_button to use hashset when set not available in earlier jython releases.</li>
+<li>release under MIT license.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-3">
+<h3>0.86 2014-02-27</h3>
+<ul class="simple">
+<li>update Text.tprint multiline print on background color.</li>
+<li>update Control to cache rendered text.</li>
+<li>change license from GPL to LGPL.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-4">
+<h3>0.85 2013-04-03</h3>
+<ul class="simple">
+<li>update Interface.panel_update to move event generation from InterfaceState.</li>
+<li>update Interface.set_label_display and Interface.panel_update to ensure panel update.</li>
+<li>update Text.tprint to adjust text position.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-5">
+<h3>0.84 2012-03-01</h3>
+<ul class="simple">
+<li>transfer clipboard functions to Interface</li>
+<li>add Interface methods clipboard_get and clipboard_set</li>
+<li>add Interface methods draw and clear</li>
+<li>refactoring of Control objects</li>
+<li>generate documentation with epydoc</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-6">
+<h3>0.83 2012-02-26</h3>
+<ul class="simple">
+<li>change interface update for performance</li>
+<li>add interface is_update and to check update, limiting panel redraw on screen</li>
+<li>add interface set_update manually change panel update, that triggers either _force_update or sets to sustained updates until unset</li>
+<li>add panel function list that can be changed with set_panel_function</li>
+<li>change panel_update to work with improved update</li>
+<li>add to InterfaceState state object the attribute panel_update</li>
+<li>update control action to change control function, including avoiding exception capture of add functions</li>
+<li>add to textbox check_size, set_line_max and get_line_max, set_line_width, get_line_width</li>
+<li>add to textbox text_copy, text_paste</li>
+<li>add to textbox get_text</li>
+<li>change textbox action adding to button id _copy and _paste extension on copy and paste</li>
+<li>text_margin can take (t,r,b,l) in addition to single int</li>
+<li>add control set_text_margin and get_text_margin</li>
+<li>add control get_display_text to retrieve text font object</li>
+<li>update control set_list to keep single control tip</li>
+<li>update Text __init__, add set_margin, and change methods to margin (t,r,b,l)</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-7">
+<h3>0.82 2012-02-18</h3>
+<ul class="simple">
+<li>add control add_action method to submit function to bind to control</li>
+<li>update control action to call bound function</li>
+<li>add textbox control</li>
+<li>add Textbox methods format_text, add_format, set_scroll_line</li>
+<li>add Text methods set_text_alignment, set_margin, check_sizes, surface_size, word_wrap, split_long_text</li>
+<li>update Text method tprint for multiline print</li>
+<li>update interface _activate_controls to resolve link controls, add control _activate</li>
+<li>refactor code to separate control types</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-8">
+<h3>0.81 2010-11-20</h3>
+<ul class="simple">
+<li>Interface Class changes:</li>
+<li>: default images base64 encoded in a py file to ease packaging.</li>
+<li>: extend image default source, allow zip archive and path/zip can be given if an image not in default, and accept surfaces.</li>
+<li>: update _default_image, _set_image, set_panel_image, set_control_image, set_button_image, _display_controls, _activate_controls, enable_control, disable_control, set_moveable, activate, deactivate</li>
+<li>: add get_default_image, _zip_file, _data_source</li>
+<li>: add parameter data_zip, button_size, color_key, font_type</li>
+<li>InterfaceControl Class changes:</li>
+<li>: update set_control_image, set_listing_icon, set_listing, set_list, get_list, remove_list, set_value, define_buttons, control_size, action, action_numeric_i, next, previous, reset, set_activated, set_activated_lock, set_active, set_display_info, set_label_info, set_display_text, set_label_text, check_link, set_tips, set_tip</li>
+<li>: change control_size/set_control_size, set_display/set_display_info, set_label/set_label_info</li>
+<li>: add set_list_icon, set_icon_size, set_label, get_label, resize_control, set_enabled, is_enabled, get_size, set_color, get_list_index, set_list_index</li>
+<li>: add parameter icon_size, font_type</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-9">
+<h3>0.80 2010-10-25</h3>
+<ul class="simple">
+<li>Interphase in package</li>
+<li>place interphase folder in path or in script folder</li>
+<li>import can work from a zip containing interphase folder</li>
+<li>: before import interphase place zip in path</li>
+<li>: sys.path.insert(0, './interphase_zipfile')</li>
+<li>: set zip path to interphase zip, ex. is in script folder</li>
+<li>image parameter ['none'] to 'none'</li>
+<li>image parameter None use default image or first panel image</li>
+<li>image parameter can be string or list</li>
+<li>change DisplayMsg Class to Text Class</li>
+<li>update load_image</li>
+<li>interphase.util has Text and load_image</li>
+<li>run interphase.py to exec demo</li>
+<li>add pygame events interphase.EVENT['controlselect'], interphase.EVENT['controlinteract']</li>
+<li>: event.state parameter references InterfaceState object instance</li>
+<li>Interface Class changes:</li>
+<li>: add image for default images</li>
+<li>: add parameters data_folder, event</li>
+<li>: add _control link to InterfaceControl</li>
+<li>: add _load_image link to interphase.util.load_image</li>
+<li>: add _text link to interphase.util.Text</li>
+<li>: add _data for data_folder</li>
+<li>: default images in image.dat</li>
+<li>: update set_panel_image, set_control_image, set_button_image, _moveable_panel, _display_controls, _interact, get_state, panel_update, move_control, _panel_interaction, _display_update</li>
+<li>: add _set_image, _default_image, get_panel_image, _control_interact, _control_select, get_id, get_pointer_position, set_pointer_interact</li>
+<li>: add timer to panel movement and control response</li>
+<li>: update parameters move_rate, control_response</li>
+<li>: change parameter pointer_move to pointer_interact</li>
+<li>: update InterfaceState Class</li>
+<li>InterfaceControl Class changes:</li>
+<li>: update parameters control_response, hold_response</li>
+<li>: add parameters delay_response and activated_toggle:'Lock', event</li>
+<li>: update set_listing_icon, set_control_image, set_listing, set_value, control_size, set_list, set_activated, check_link, action</li>
+<li>: add set_activated_lock, is_activated_lock, action_numeric_i, action_numeric_f, get_id</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-10">
+<h3>0.73 2010-02-05</h3>
+<ul class="simple">
+<li>update panel _panel_interaction</li>
+<li>update control set_listing</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-11">
+<h3>0.72 2009-10-12</h3>
+<ul class="simple">
+<li>add panel move_control, set_control_move, get_control_move, is_control_moveable, set_control_moveable</li>
+<li>add control get_position</li>
+<li>add Interphase demo - Sliding Control Puzzle</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-12">
+<h3>0.71 2009-09-07</h3>
+<ul class="simple">
+<li>InterfaceControl</li>
+<li>: add parameters control_response, split_text</li>
+<li>: update set_listing_icon, control_size, set_value, set_display, set_label</li>
+<li>: add reset, set_display_text, set_label_text</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-13">
+<h3>0.70 2009-09-05</h3>
+<ul class="simple">
+<li>rename panel variables to protect</li>
+<li>add panel get_position, get_size</li>
+<li>change panel get_values to get_value</li>
+<li>update panel: get_control, get_value, _display_controls, _display_update, _moveable_panel, _interact, _panel_interaction, panel_update, control: set_value</li>
+<li>optimize panel update</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-14">
+<h3>0.60 2009-08-20</h3>
+<ul class="simple">
+<li>add panel methods: is_moveable, set_moveable, set_panel_display, is_info_display, set_info_display, is_label_display, set_label_display, is_tips_display, set_tips_display, get_control, add_info, clear_info; update: display_controls, interact, remove_control, enable_control, disable_control, get_values.</li>
+<li>add control methods: get_list, set_active, set_link_activated, is_activated, set_activated; update: set_list, remove_list, set_tip, action, next, previous.</li>
+<li>add 'function_toggle' type control, and add chain linking to function controls.</li>
+<li>remove panel pointer_block and pygame.event.set_blocked(MOUSEBUTTONDOWN).</li>
+<li>change control_activated/control_deactivated/button_activated/button_size/button_minsize/command_list to control_enabled/control_disabled/activated/control_size/control_minsize/control_list.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="section-15">
+<h3>0.50 2009-08-07</h3>
+<ul class="simple">
+<li>initial release</li>
+</ul>
+</div>
+</div>
+
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
+
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+        </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 JG
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/projects/interphase/versions/#"}>Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+
+    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Applet Deployment Using PyJ2D - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+
+<link rel="canonical" href="https://jggatc.github.io/applet-deployment-using-pyj2d/">
+
+        <meta name="author" content="Jim" />
+        <meta name="keywords" content="java,java2d,jython,pygame,python" />
+        <meta name="description" content="The PyJ2D module permits scripts coded in Python programming language and the Pygame module to run in the Java virtual machine (JVM) using the Jython interpreter. PyJ2D wraps several Java libraries including the Java 2D graphics library to emulate Pygame functionality. Information about PyJ2D can be obtained on the PyJ2D …" />
+
+        <meta property="og:site_name" content="GATC" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Applet Deployment Using PyJ2D"/>
+        <meta property="og:url" content="https://jggatc.github.io/applet-deployment-using-pyj2d/"/>
+        <meta property="og:description" content="The PyJ2D module permits scripts coded in Python programming language and the Pygame module to run in the Java virtual machine (JVM) using the Jython interpreter. PyJ2D wraps several Java libraries including the Java 2D graphics library to emulate Pygame functionality. Information about PyJ2D can be obtained on the PyJ2D …"/>
+        <meta property="article:published_time" content="2012-02-08" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content="java" />
+            <meta property="article:tag" content="java2d" />
+            <meta property="article:tag" content="jython" />
+            <meta property="article:tag" content="pygame" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:author" content="Jim" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+        <link href="https://jggatc.github.io/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
+              title="GATC Programming ATOM Feed"/>
+
+    
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://jggatc.github.io/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
+                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
+                    <li><a href="https://jggatc.github.io/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://jggatc.github.io/applet-deployment-using-pyj2d/"
+                       rel="bookmark"
+                       title="Permalink to Applet Deployment Using PyJ2D">
+                        Applet Deployment Using PyJ2D
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-02-08T13:13:00-05:00"> Wed 08 February 2012</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://jggatc.github.io/tag/java.html">java</a>
+        /
+	<a href="https://jggatc.github.io/tag/java2d.html">java2d</a>
+        /
+	<a href="https://jggatc.github.io/tag/jython.html">jython</a>
+        /
+	<a href="https://jggatc.github.io/tag/pygame.html">pygame</a>
+        /
+	<a href="https://jggatc.github.io/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>The <a class="reference external" href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a> module permits scripts coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://pygame.org/">Pygame</a> module to run in the Java virtual machine (JVM) using the <a class="reference external" href="https://www.jython.org/">Jython</a> interpreter. PyJ2D wraps several Java libraries including the Java 2D graphics library to emulate Pygame functionality. Information about PyJ2D can be obtained on the <a class="reference external" href="https://jggatc.github.io/projects/pyj2d/">PyJ2D project page</a>, the <a class="reference external" href="https://jggatc.github.io/docs/pyj2d">PyJ2D documentation</a>, and the <a class="reference external" href="https://jggatc.github.io/pyj2d-python-java2d-applet/">PyJ2D: Python-Java2D Applet post</a>. I have used PyJ2D to create some <a class="reference external" href="/media/applets/">applets</a> of my <a class="reference external" href="/projects/">projects</a>, and will describe the method used to create them.</p>
+<p>The following applet was deployed with this method:</p>
+<div class="applet-box" data-width="400" data-height="300" id="pyj2d-applet">
+    <input type="button" value="Launch" id="launch-button" onclick="appletLauncher('pyj2d-applet')">
+    <div id="app-title">PyJ2D Demo</div>
+</div><div class="app-caption docutils container">
+Note: browser requires <a class="reference external" href="https://www.java.com/getjava/">Java plug-in</a> to execute and JavaScript enabled to launch. As this is an unsigned applet, the security setting of the latest release of JVM will <a class="reference external" href="https://www.java.com/en/download/help/java_blocked.xml">block</a> your access.</div>
+<p>My current development environment is Linux with <a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/">Java Development Kit (JDK) 6</a> installed that includes Java Runtime and development tools such as the Java compiler, appletviewer and jar utility. Jython 2.2.1 is installed from the Linux package manager. <a class="reference external" href="https://www.jython.org/download.html">Jython installers</a> can be downloaded, I downloaded Jython 2.2.1 and 2.5.2 and created standalone jython.jar of these as described in the installation instructions.</p>
+<p>The Python script can be run using the Jython installation from the command line with the command:</p>
+<div class="highlight"><pre><span></span>jython<span class="w"> </span>script.py
+</pre></div>
+<p>To run using a standalone jython.jar, use the command with jython.jar path if applicable:</p>
+<div class="highlight"><pre><span></span>java<span class="w"> </span>-jar<span class="w"> </span>jython.jar<span class="w"> </span>script.py
+</pre></div>
+<p>Alternatively, Java can run the script directly by adding jython.jar to the Java classpath with the command:</p>
+<div class="highlight"><pre><span></span>java<span class="w"> </span>-cp<span class="w"> </span>jython.jar:<span class="nv">$CLASSPATH</span><span class="w"> </span>org.python.util.jython<span class="w"> </span>script.py
+</pre></div>
+<p>The Python script requires some editing to work with PyJ2D. Check out the <a class="reference external" href="https://jggatc.github.io/docs/pyj2d">PyJ2D documentation</a> to see the functionality of the module. Script modifications include any Pygame statements not implemented in the PyJ2D module, and Python statement or library not supported by the Jython version used. For an example, you can <a class="reference external" href="https://jggatc.github.io/cdn/files/Pyj2d_Applet.zip">download</a> the Python code that was used to generate the applet on this page. To use the PyJ2D module, place the pyj2d folder in the script folder or on the module path, and import pyj2d. To maintain the Pygame commands, either import submodules from pyj2d or use the statement 'import pyj2d as pygame'. Run the script in the JVM, and observe the runtime errors that will assist in discovering the changes required. Once a script can run in the JVM, it can then be used to create an applet.</p>
+<p>To create an applet, copy Applet.py from the pyj2d folder to the script folder. Applet.py contains the Applet class that subclasses japplet. Edit Applet.py to import your script, set applet size, and add code to link the applet thread to the script application, including an optional script setup along with script execution statements that will update during the applet thread loop. Alternatively, use Applet.py as a guide and edit your script accordingly, but note that Java applets do not start from main() rather launch from a japplet subclass with the same name as the script. To test, the edited Applet.py script can be run directly on the desktop JVM as described for regular scripts, for instance:</p>
+<div class="highlight"><pre><span></span>jython<span class="w"> </span>Applet.py
+</pre></div>
+<p>This executes the applet code using the pawt module in these statements in Applet.py:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">pawt</span>
+    <span class="n">pawt</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">Applet</span><span class="p">(),</span> <span class="n">size</span><span class="o">=</span><span class="n">_app_size</span><span class="p">)</span>
+</pre></div>
+<p>To create an applet packaged in a JAR file that can be deployed online, the Python code needs to be compiled to Java bytecode using jythonc that calls the Java compiler to transform the code to .class files, which is currently only possible with Jython 2.2.1. The following command compiles and creates a JAR of the script, which requires a separate standalone jython.jar:</p>
+<div class="highlight"><pre><span></span>jythonc<span class="w"> </span>--jar<span class="w"> </span>Pyj2d_Applet.jar<span class="w"> </span>Applet.py
+</pre></div>
+<p>To compile a single JAR that includes Jython dependencies, use the command:</p>
+<div class="highlight"><pre><span></span>jythonc<span class="w"> </span>--core<span class="w"> </span>--deep<span class="w"> </span>--jar<span class="w"> </span>Pyj2d_Applet.jar<span class="w"> </span>Applet.py
+</pre></div>
+<p>This command packages only the necessary dependencies of Jython, that results in a reduced applet size. For my applets I used this method, but to share common components among several applets I extracted the PyJ2D and Jython components and repackaged. Commands that follow use the jar utility included with JDK, but can be done with any Zip archiver program, such as Linux File-Roller, since a JAR file is essentially a Zip file with a jar extension. From the Pyj2d_Applet.jar, extract the pyj2d and org (contains Jython dependencies) folders, then delete these from the archive. Note that since org folder contains the necessary Jython dependencies for a particular applet, if it is shared among applets, ensure to chose a Jython org folder that has a dependency set sufficient for all the shared applets. I used Linux 'diff -r' command to compare Jython org folders.</p>
+<p>Then create JAR files of the extracted folders that contains .class files. I packaged the pyj2d folder as PyJ2D.jar and the org folder containing Jython dependencies as Jython.jar, which in this case was 0.8M vs 1.9M for the standalone jython.jar, using the following commands:</p>
+<div class="highlight"><pre><span></span>jar<span class="w"> </span>cvf<span class="w"> </span>PyJ2D.jar<span class="w"> </span>pyj2d
+jar<span class="w"> </span>cvf<span class="w"> </span>Jython.jar<span class="w"> </span>org
+</pre></div>
+<p>If the applet has image files, the applet JAR can be updated with the image folder with the command:</p>
+<div class="highlight"><pre><span></span>jar<span class="w"> </span>uvf<span class="w"> </span>Pyj2d_Applet.jar<span class="w"> </span>image
+</pre></div>
+<p>To run the applet before deployment online, use appletviewer included with the JDK package. To use appletviewer, place an edited Applet.html, included with pyj2d module, together with the applet JAR(s) and use the command:</p>
+<div class="highlight"><pre><span></span>appletviewer<span class="w"> </span>Applet.html
+</pre></div>
+<p>This will test the execution and whether the applet conforms to the JVM security profile. Using this procedure, unsigned applets were created successfully, but if code is required that violates applet's security such as disk access, the applet needs to be signed for permission as done with regular Java applets.</p>
+<p>To deploy online, place applet JAR(s) on your server, and use HTML code that launch regular Java applets. To create a launchable applet as seen on this post, you can use the following code that calls a JavaScript function that launches the applet. Within the Web page, place the following HTML code, optional putting style attributes in a css file:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Pyj2d_Applet&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Applet: Pyj2d_Applet&quot;</span>
+    <span class="na">style</span><span class="o">=</span><span class="s">&quot;width:400px; height:300px; border:1px solid #333;</span>
+<span class="s">    background-color:#000; position:relative; left:100px;&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;button&#39;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;Launch Applet&#39;</span>
+    <span class="na">onClick</span><span class="o">=</span><span class="s">&#39;appletLauncher(&quot;Pyj2d_Applet&quot;)&#39;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;position:absolute; top:138px; width:400px;</span>
+<span class="s">    font-size:24px; color:#646464; text-align:center;&quot;</span><span class="p">&gt;</span>
+        PyJ2D Applet<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>Replace 'Pyj2d_Applet' of the id and the appletLauncher parameter, which should be the same and derived from the applet JAR name, in this case Pyj2d_Applet.jar. The HTML code creates a block on the Web page with a button to call the JavaScript function appletLauncher, which should be placed at the top of the Web page or included with other JavaScript used. The code for appletLauncher is presented below:</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">appletLauncher</span>
+<span class="w">        </span><span class="p">(</span><span class="nx">appletArchive</span><span class="p">,</span><span class="nx">appletCode</span><span class="p">,</span><span class="nx">appletWidth</span><span class="p">,</span><span class="nx">appletHeight</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appletArchive</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletArchive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appletArchive</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s2">&quot;.jar,Jython.jar,PyJ2D.jar&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletCodebase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://website.com/apps/&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appletCode</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;Applet.class&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appletWidth</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;400&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appletHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appletHeight</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;300&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">appletID</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="s1">&#39;&lt;applet width=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletWidth</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s1">&#39; height=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletHeight</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s1">&#39; codebase=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletCodebase</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s1">&#39; code=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletCode</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s1">&#39; archive=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletArchive</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s1">&#39; alt=&quot;Applet requires JVM to run&quot;&gt;&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+<p>Essentially, appletLauncher is called with the appletArchive parameter, in this case PyJ2D_Applet that relates to PyJ2D_Applet.jar. Optional arguments include appletCode (the main java class) that defaults to Applet.class coded in Applet.py, and appletWidth/appletHeight that defaults to 400/300. The appletCodebase should be the Web address to the server folder containing the JAR files, in this case using separate JARs, PyJ2D_Applet.jar, PyJ2D.jar, and Jython.jar. When called, the JavaScript function appletLauncher will replace the HTML code that has an id set to appletID with the code that launches the applet.</p>
+<p>Submitted by <a class="reference external" href="/">Jim</a> on February 8, 2012 at 5:00 pm</p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
+
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+        </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2025 JG
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/applet-deployment-using-pyj2d/#"}>Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+
+    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+
+
+
+</body>
+</html>

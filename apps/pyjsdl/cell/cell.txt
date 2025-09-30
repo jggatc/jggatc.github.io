@@ -1,0 +1,2 @@
+The app can run in the JavaScript environment following Pyjs compilation with the Pyjsdl library. Place pyjsdl library folder in the app folder, compile with 'pyjsbuild -O cell.py --dynamic-link -o output' statement, place data folder in output folder, and run cell.html in browser.
+
