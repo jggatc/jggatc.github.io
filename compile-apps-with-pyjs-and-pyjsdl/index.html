@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="https://jggatc.github.io/images/gatc-logo.png" rel="icon">
-    <link rel="apple-touch-icon" href="https://jggatc.github.io/images/gatc-logo.png">
+    <link href="https://gatc.ca/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://gatc.ca/images/gatc-logo.png">
 
-<link rel="canonical" href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">
+<link rel="canonical" href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">
 
         <meta name="author" content="Jim" />
         <meta name="keywords" content="html5 canvas,javascript,pygame,pyjs,pyjsdl,python" />
@@ -20,7 +20,7 @@
         <meta property="og:site_name" content="GATC" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Compile Apps with Pyjs and Pyjsdl"/>
-        <meta property="og:url" content="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/"/>
+        <meta property="og:url" content="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/"/>
         <meta property="og:description" content="Pyjsdl implements Pygame through JavaScript functionality permitting porting Python/Pygame apps to the Web browser as JavaScript/HTML5 apps via Pyjs compilation. This post provides some additional details required to port the app, supplementing a previous post. The following app was deployed from Serpent Duel script, and runs with Python …"/>
         <meta property="article:published_time" content="2014-09-03" />
             <meta property="article:section" content="Programming" />
@@ -35,19 +35,19 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://jggatc.github.io/theme/css/bootstrap.slate.min.css" type="text/css"/>
-    <link href="https://jggatc.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://gatc.ca/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://gatc.ca/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="https://jggatc.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://jggatc.github.io/theme/css/style.css" type="text/css"/>
-        <link href="https://jggatc.github.io/theme/css/custom.css" rel="stylesheet">
+    <link href="https://gatc.ca/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gatc.ca/theme/css/style.css" type="text/css"/>
+        <link href="https://gatc.ca/theme/css/custom.css" rel="stylesheet">
 
-        <link href="https://jggatc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://gatc.ca/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="GATC ATOM Feed"/>
 
-        <link href="https://jggatc.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        <link href="https://gatc.ca/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
               title="GATC RSS Feed"/>
-        <link href="https://jggatc.github.io/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://gatc.ca/feeds/programming.rss.xml" type="application/atom+xml" rel="alternate"
               title="GATC Programming ATOM Feed"/>
 
     
@@ -64,15 +64,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://jggatc.github.io/" class="navbar-brand">
-<img class="img-responsive pull-left gap-right" src="https://jggatc.github.io/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            <a href="https://gatc.ca/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://gatc.ca/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                    <li><a href="https://jggatc.github.io/projects">Projects</a></li>
-                    <li><a href="https://jggatc.github.io/docs">Docs</a></li>
-                    <li><a href="https://jggatc.github.io/about">About</a></li>
+                    <li><a href="https://gatc.ca/projects">Projects</a></li>
+                    <li><a href="https://gatc.ca/docs">Docs</a></li>
+                    <li><a href="https://gatc.ca/about">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -92,7 +92,7 @@
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/"
+                    <a href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/"
                        rel="bookmark"
                        title="Permalink to Compile Apps with Pyjs and Pyjsdl">
                         Compile Apps with Pyjs and Pyjsdl
@@ -113,32 +113,32 @@
 
 
 <span class="label label-default">Tags</span>
-	<a href="https://jggatc.github.io/tag/html5-canvas.html">html5 canvas</a>
+	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
-	<a href="https://jggatc.github.io/tag/javascript.html">javascript</a>
+	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
         /
-	<a href="https://jggatc.github.io/tag/pygame.html">pygame</a>
+	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
         /
-	<a href="https://jggatc.github.io/tag/pyjs.html">pyjs</a>
+	<a href="https://gatc.ca/tag/pyjs.html">pyjs</a>
         /
-	<a href="https://jggatc.github.io/tag/pyjsdl.html">pyjsdl</a>
+	<a href="https://gatc.ca/tag/pyjsdl.html">pyjsdl</a>
         /
-	<a href="https://jggatc.github.io/tag/python.html">python</a>
+	<a href="https://gatc.ca/tag/python.html">python</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p><a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> implements <a class="reference external" href="https://pygame.org/">Pygame</a> through JavaScript functionality permitting porting <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> apps to the Web browser as JavaScript/HTML5 apps via <a class="reference external" href="http://pyjs.org/">Pyjs</a> compilation. This post provides some additional details required to port the app, supplementing a previous <a class="reference external" href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">post</a>. The following app was deployed from Serpent Duel <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a>, and runs with Python and Pygame, on <a class="reference external" href="https://java.com/">JVM</a> with <a class="reference external" href="https://jython.org/">Jython</a> and <a class="reference external" href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>, and in the Web browser with Pyjs compilation and Pyjsdl.</p>
+                <p><a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> implements <a class="reference external" href="https://pygame.org/">Pygame</a> through JavaScript functionality permitting porting <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> apps to the Web browser as JavaScript/HTML5 apps via <a class="reference external" href="http://pyjs.org/">Pyjs</a> compilation. This post provides some additional details required to port the app, supplementing a previous <a class="reference external" href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">post</a>. The following app was deployed from Serpent Duel <a class="reference external" href="https://gatc.ca/cdn/files/serpentduel.zip">script</a>, and runs with Python and Pygame, on <a class="reference external" href="https://java.com/">JVM</a> with <a class="reference external" href="https://jython.org/">Jython</a> and <a class="reference external" href="https://gatc.ca/projects/pyj2d/">PyJ2D</a>, and in the Web browser with Pyjs compilation and Pyjsdl.</p>
 <p>This JavaScript app was compiled with Pyjs and Pyjsdl:</p>
 <div class="jsapp-box" data-width="400" data-height="300" id="app-container-serpentduel">
     <input type="button" value="Launch" id="launch-button" onclick="appFrameLauncher('serpentduel')">
     <div id="app-title">Pyjsdl Demo</div>
 </div><div class="app-caption docutils container">
-The app was compiled to JavaScript from a <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a> coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a> module.</div>
+The app was compiled to JavaScript from a <a class="reference external" href="https://gatc.ca/cdn/files/serpentduel.zip">script</a> coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> module.</div>
 <p>Compilation of the script requires Pyjs installation, check the <a class="reference external" href="https://github.com/pyjs/pyjs/wiki/GettingStarted">install instruction</a> and guide.txt in Pyjsdl folder. Currently, the <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs Git build</a> is necessary and uses <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a> to install. Installation of Pyjs was straightforward, only problem encountered on my Linux setup was that the --upgrade flag was necessary on the pip install command due to an issue with the <a class="reference external" href="https://pypi.python.org/pypi/six">Six</a> library dependency probably due to an incompatible version. The Python script can be compiled with Pyjs using the command '[pyjs_path]/bin/pyjsbuild app.py --dynamic-link -o output' with option flags listed using -h option. Pyjs compilation has the -S flag for strict mode to provide the closest compatibility to Python, but for enhanced performance at the expense of compatibility compilation can be done with the -O flag for optimise mode.</p>
-<p>To compile, place Pyjsdl on the path of the app's folder. The script needs some modifications prior to compilation. To use Pyjsdl, edit the script's import statement as 'import pyjsdl as pygame' to replace Pygame. To run in the Web browser environment the app must conform to JavaScript constraints, in particular the app's main while loop operation would block browser update, resolved by revising the main while loop into a function and passing it as a callback function to the browser to call in time-triggered manner with statement pyjsdl.display.setup(function). Loading of images cannot operate as defined by the image load method of Pygame since the JavaScript cannot wait for image retrieval as this would also block browser update, so the images are preloaded by passing an images list to the setup method as pyjsdl.display.setup(function, images), and the pyjsdl.image.load method then access the preloaded images. A difficulty experienced with the current process is that any image access prior to calling the setup method will cause issues, and can be handled by chaining sequential calls to the pyjsdl.display.setup method passing various functions. Other script modifications that may be required are to address additional JavaScript environment specifics such as wait routines, to conform to Pyjs close compatibility with Python2.7, and handle any Pygame methods not implemented in <a class="reference external" href="https://jggatc.github.io/docs/pyjsdl">Pyjsdl API</a>. These modifications should permit compilation with Pyjs in strict mode.</p>
-<p>Compiling the script in Pyjs optimise mode will provide enhanced performance of a few folds, through lost of some Python compatibility that reduces the overhead of handling Python functionality not present in JavaScript. Most noticeable is lost of access to object's virtual attributes. For Pygame apps this is apparent with the Rect object that can be accessed through numerous virtual attributes, which is implemented in Pyjsdl and operates with Pyjs compilation in strict mode but lost in optimise mode, and JavaScript annoyingly registers such attribute access as undefined rather than raise an exception error. To overcome this problem such as Rect.center = (x_pos,y_pos) is to modify these statements to use the intrinsic Rect attributes (x, y, width, height) or call the object's special methods directly such as Rect.__setattr__('center', (x_pos,y_pos)). Developing a <a class="reference external" href="https://jggatc.github.io/cdn/files/pyjsdl-app-convert_140903.zip">conversion script</a> to do such changes to possibly automate some of the modifications necessary, warning the pattern-matching algorithm may have inaccuracies and requires manual verification before the change is permitted; for usage run script with -h option. There should be few such modifications necessary dependent on the app's code. These modifications should permit compilation with Pyjs in optimise mode.</p>
+<p>To compile, place Pyjsdl on the path of the app's folder. The script needs some modifications prior to compilation. To use Pyjsdl, edit the script's import statement as 'import pyjsdl as pygame' to replace Pygame. To run in the Web browser environment the app must conform to JavaScript constraints, in particular the app's main while loop operation would block browser update, resolved by revising the main while loop into a function and passing it as a callback function to the browser to call in time-triggered manner with statement pyjsdl.display.setup(function). Loading of images cannot operate as defined by the image load method of Pygame since the JavaScript cannot wait for image retrieval as this would also block browser update, so the images are preloaded by passing an images list to the setup method as pyjsdl.display.setup(function, images), and the pyjsdl.image.load method then access the preloaded images. A difficulty experienced with the current process is that any image access prior to calling the setup method will cause issues, and can be handled by chaining sequential calls to the pyjsdl.display.setup method passing various functions. Other script modifications that may be required are to address additional JavaScript environment specifics such as wait routines, to conform to Pyjs close compatibility with Python2.7, and handle any Pygame methods not implemented in <a class="reference external" href="https://gatc.ca/docs/pyjsdl">Pyjsdl API</a>. These modifications should permit compilation with Pyjs in strict mode.</p>
+<p>Compiling the script in Pyjs optimise mode will provide enhanced performance of a few folds, through lost of some Python compatibility that reduces the overhead of handling Python functionality not present in JavaScript. Most noticeable is lost of access to object's virtual attributes. For Pygame apps this is apparent with the Rect object that can be accessed through numerous virtual attributes, which is implemented in Pyjsdl and operates with Pyjs compilation in strict mode but lost in optimise mode, and JavaScript annoyingly registers such attribute access as undefined rather than raise an exception error. To overcome this problem such as Rect.center = (x_pos,y_pos) is to modify these statements to use the intrinsic Rect attributes (x, y, width, height) or call the object's special methods directly such as Rect.__setattr__('center', (x_pos,y_pos)). Developing a <a class="reference external" href="https://gatc.ca/cdn/files/pyjsdl-app-convert_140903.zip">conversion script</a> to do such changes to possibly automate some of the modifications necessary, warning the pattern-matching algorithm may have inaccuracies and requires manual verification before the change is permitted; for usage run script with -h option. There should be few such modifications necessary dependent on the app's code. These modifications should permit compilation with Pyjs in optimise mode.</p>
 <p>Pyjs compiles to an output folder, to which you should transfer any necessary resources such as image folder. The JavaScript can be tested in the Web browser from the local HTML file by opening the main HTML file in Firefox or Chrome (launch Chrome with --allow-file-access-from-files <a class="reference external" href="https://www.chromium.org/developers/how-tos/run-chromium-with-flags">option</a> to run local files). The JavaScript app can then be deployed on the Web page, for decreased load times the size of JavaScript app can be reduced with <a class="reference external" href="https://developers.google.com/closure/compiler/">Closure Compiler</a>. Further development is being directed to enhance the performance of Pyjsdl, such as use of object pools to minimize creation of new objects and code optimization to harness JavaScript JIT compiler. For further information on the use of Pyjsdl, check Pyjsdl <a class="reference external" href="/projects/pyjsdl/resources/">resources page</a>. If there is any issues regarding use of the module, suggestions for improvements, or to share links to information/tutorial/demo, send a message through comments, <a class="reference external" href="/about/">direct messaging</a>, or via <a class="reference external" href="https://github.com/jggatc/pyjsdl">Github</a>.</p>
-<p>Updated 2021/04/29 - revised Serpent Duel <a class="reference external" href="https://jggatc.github.io/cdn/files/serpentduel.zip">script</a>.</p>
+<p>Updated 2021/04/29 - revised Serpent Duel <a class="reference external" href="https://gatc.ca/cdn/files/serpentduel.zip">script</a>.</p>
 
             </div>
             <!-- /.entry-content -->
@@ -155,7 +155,7 @@ The app was compiled to JavaScript from a <a class="reference external" href="ht
     <!-- Sidebar/Images -->
     <li class="list-group-item">
         <ul class="list-group" id="images">
-                    <a href="https://jggatc.github.io" target="_blank"><img width="100%" class="img-thumbnail" src="https://jggatc.github.io/images/gatc.png"/></a>
+                    <a href="https://gatc.ca" target="_blank"><img width="100%" class="img-thumbnail" src="https://gatc.ca/images/gatc.png"/></a>
         </ul>
     </li>
     <!-- End Sidebar/Images -->
@@ -165,49 +165,49 @@ The app was compiled to JavaScript from a <a class="reference external" href="ht
   <h4>Projects</h4>
   <ul class="list-group" id="pages">
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/microbe/">Microbe</a>
+          <a href="https://gatc.ca/projects/microbe/">Microbe</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/replicator/">Replicator Machine</a>
+          <a href="https://gatc.ca/projects/replicator/">Replicator Machine</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/neural-construct/">Neural Construct</a>
+          <a href="https://gatc.ca/projects/neural-construct/">Neural Construct</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/replicant/">Replicant</a>
+          <a href="https://gatc.ca/projects/replicant/">Replicant</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/biomorph-entity/">Biomorph Entity</a>
+          <a href="https://gatc.ca/projects/biomorph-entity/">Biomorph Entity</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/genetic-construct/">Genetic Construct</a>
+          <a href="https://gatc.ca/projects/genetic-construct/">Genetic Construct</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/nexus/">Nexus</a>
+          <a href="https://gatc.ca/projects/nexus/">Nexus</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/cell-matrix/">Cell Matrix</a>
+          <a href="https://gatc.ca/projects/cell-matrix/">Cell Matrix</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/biomorph-evolve/">Biomorph Evolve</a>
+          <a href="https://gatc.ca/projects/biomorph-evolve/">Biomorph Evolve</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/brownian-motion/">Brownian Motion</a>
+          <a href="https://gatc.ca/projects/brownian-motion/">Brownian Motion</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/draw-pad/">Draw Pad</a>
+          <a href="https://gatc.ca/projects/draw-pad/">Draw Pad</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/interphase/">Interphase</a>
+          <a href="https://gatc.ca/projects/interphase/">Interphase</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/pyj2d/">PyJ2D</a>
+          <a href="https://gatc.ca/projects/pyj2d/">PyJ2D</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/pyjsdl/">Pyjsdl</a>
+          <a href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a>
         </li>
         <li class="list-group-item">
-          <a href="https://jggatc.github.io/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+          <a href="https://gatc.ca/projects/pyjsdl-ts/">Pyjsdl-ts</a>
         </li>
   </ul>
 </li>
@@ -216,17 +216,17 @@ The app was compiled to JavaScript from a <a class="reference external" href="ht
 <li class="list-group-item">
   <h4>Posts</h4>
   <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-entity-app/">Biomorph Entity App</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/brownian-motion-app/">Brownian Motion App</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/biomorph-evolve-app/">Biomorph Evolve App</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
-    <li class="list-group-item"><a href="https://jggatc.github.io/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -287,19 +287,19 @@ The app was compiled to JavaScript from a <a class="reference external" href="ht
             &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://jggatc.github.io/compile-apps-with-pyjs-and-pyjsdl/#"}>Back to top</a></p></div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/#"}>Back to top</a></p></div>
       </div>
    </div>
 </footer>
-<script src="https://jggatc.github.io/theme/js/jquery.min.js"></script>
+<script src="https://gatc.ca/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://jggatc.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://gatc.ca/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://jggatc.github.io/theme/js/respond.min.js"></script>
+<script src="https://gatc.ca/theme/js/respond.min.js"></script>
 
-    <script src="https://jggatc.github.io/theme/js/custom.js"></script>
+    <script src="https://gatc.ca/theme/js/custom.js"></script>
 
 
 
