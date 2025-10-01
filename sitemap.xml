@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://gatc.ca/</loc>
-<lastmod>2025-10-01T03:53:18-00:00</lastmod>
+<lastmod>2025-10-01T18:43:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,13 +13,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://gatc.ca/about/</loc>
 <lastmod>2009-02-17T03:58:00-05:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://gatc.ca/media/applets/</loc>
-<lastmod>2011-11-22T11:32:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -90,13 +83,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://gatc.ca/projects/interphase/</loc>
 <lastmod>2009-08-11T12:28:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://gatc.ca/media/</loc>
-<lastmod>2009-12-09T00:36:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -193,20 +179,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://gatc.ca/media/screenshots/</loc>
-<lastmod>2009-12-06T17:11:00-05:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://gatc.ca/media/videos/</loc>
-<lastmod>2009-11-16T14:39:00-05:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://gatc.ca/biomorph-entity-app/</loc>
 <lastmod>2025-01-22T20:48:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -284,14 +256,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://gatc.ca/applet-deployment-using-pyj2d/</loc>
+<loc>https://gatc.ca/app-deployment-using-pyj2d/</loc>
 <lastmod>2012-02-08T13:13:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>https://gatc.ca/pyj2d-python-java2d-applet/</loc>
+<loc>https://gatc.ca/pyj2d-python-java2d-app/</loc>
 <lastmod>2011-11-21T16:35:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.4</priority>
