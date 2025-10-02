@@ -165,6 +165,15 @@ code {
     background-color: #eee;
 }
 
+.highlight pre {
+    background: #292a2d;
+    font-size: 14px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,1.0);
+}
+
 .projects {
     max-width: 1200px;
     margin: 1.25em auto;

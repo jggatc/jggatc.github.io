@@ -180,7 +180,7 @@ jar<span class="w"> </span>cvf<span class="w"> </span>Jython.jar<span class="w">
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 <p>Replace 'Pyj2d_Applet' of the id and the appletLauncher parameter, which should be the same and derived from the applet JAR name, in this case Pyj2d_Applet.jar. The HTML code creates a block on the Web page with a button to call the JavaScript function appletLauncher, which should be placed at the top of the Web page or included with other JavaScript used. The code for appletLauncher is presented below:</p>
-<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
 <span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">appletLauncher</span>
 <span class="w">        </span><span class="p">(</span><span class="nx">appletArchive</span><span class="p">,</span><span class="nx">appletCode</span><span class="p">,</span><span class="nx">appletWidth</span><span class="p">,</span><span class="nx">appletHeight</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
@@ -199,7 +199,7 @@ jar<span class="w"> </span>cvf<span class="w"> </span>Jython.jar<span class="w">
 <span class="w">            </span><span class="s1">&#39; archive=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appletArchive</span><span class="w"> </span><span class="o">+</span>
 <span class="w">            </span><span class="s1">&#39; alt=&quot;Applet requires JVM to run&quot;&gt;&#39;</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 <p>Essentially, appletLauncher is called with the appletArchive parameter, in this case PyJ2D_Applet that relates to PyJ2D_Applet.jar. Optional arguments include appletCode (the main java class) that defaults to Applet.class coded in Applet.py, and appletWidth/appletHeight that defaults to 400/300. The appletCodebase should be the Web address to the server folder containing the JAR files, in this case using separate JARs, PyJ2D_Applet.jar, PyJ2D.jar, and Jython.jar. When called, the JavaScript function appletLauncher will replace the HTML code that has an id set to appletID with the code that launches the applet.</p>
 
