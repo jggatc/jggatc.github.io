@@ -18,12 +18,14 @@ http://developer.yahoo.net/yui/license.txt
 version: 2.5.1
 */
 html {
-    color: #000;
-    background: #FFF;
+    color: #eee;
+    background: #272b30;
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
     margin: 0;
     padding: 0;
+    background: #272b30;
+    color: #eee;
 }
 table {
     border-collapse: collapse;
@@ -67,7 +69,7 @@ input,textarea,select {
 input,textarea,select {*font-size:100%;
 }
 legend {
-    color: #000;
+    color: #eee;
 }
 body {
     font: 13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;
@@ -93,15 +95,15 @@ pre,code,kbd,samp,tt {
 * defined below).
 */
 body {
-    background: #ffffff;
-    color: #000000;
+    background: #272b30;
+    color: #eee;
 }
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 a {
-    color: #355f7c;
+    color: #547d9b;
     text-decoration: none;
 }
 
@@ -113,9 +115,9 @@ dt {
     font-weight: bold;
 }
 h1, h2 {
-    color: #20435C;
-    background: #F2F2F2;
-    border-bottom: 1px solid #CCC;
+    color: #eee;
+    background: #272b30;
+    border-bottom: 1px solid #666;
     padding: 10px;
 }
 center {
@@ -143,7 +145,8 @@ a.link {
 h1.epydoc {
     margin: -14px 0 0;
     font-size: +140%;
-    color: #20435C;
+    background: #272b30;
+    color: #41617c;
 }
 h2.epydoc {
     font-size: +130%;
@@ -193,9 +196,9 @@ table td.footer {
 * groups using 'group header' rows.
 */
 td.table-header {
-    background: #F2F2F2;
-    color: #20435C;
-    border: 1px solid #CCC;
+    background: #272b30;
+    color: #eee;
+    border: 1px solid #666;
     padding: 5px 10px;
 }
 td.table-header table a:visited {
@@ -205,8 +208,8 @@ span.table-header {
     font-size: 120%;
 }
 th.group-header {
-    background: #c0e0f8;
-    color: #000000;
+    background: #272b30;
+    color: #eee;
     text-align: left;
     font-size: 115%;
     border: 1px solid #608090;
@@ -224,11 +227,11 @@ table.summary {
     border-collapse: collapse;
     background: #FFF;
     color: #000000;
-    border: 1px solid #CCC;
+    border: 1px solid #666;
     margin: 0 0 20px;
 }
 td.summary {
-    border: 1px solid #CCC;
+    border: 1px solid #666;
     padding: 5px 10px;
 }
 code.summary-type {
@@ -249,7 +252,7 @@ table.details {
     margin: .2em 0 0 0;
 }
 table.details table {
-    color: #000000;
+    color: #eee;
 }
 
 /* Fields */
@@ -283,9 +286,9 @@ div.fields p {
 */
 table.link-index {
     border-collapse: collapse;
-    background: #F2F2F2;
-    color: #000000;
-    border: 1px solid #CCC;
+    background: #272b30;
+    color: #eee;
+    border: 1px solid #666;
 }
 td.link-index {
     border-width: 0px;
@@ -296,9 +299,9 @@ span.index-where {
 }
 table.metadata-index {
     border-collapse: collapse;
-    background: #e8f0f8;
-    color: #000000;
-    border: 1px solid #608090;
+    background: #272b30;
+    color: #eee;
+    border: 1px solid #666;
     margin: .2em 0 0 0;
 }
 td.metadata-index {
@@ -315,19 +318,19 @@ table.link-index h2.epydoc {
 * table, and when listing property accessor functions.
 * */
 .sig-name {
-    color: #006080;
+    color: #206f90;
 }
 .sig-arg {
-    color: #008060;
+    color: #37a07e;
 }
 .sig-default {
-    color: #602000;
+    color: #702e10;
 }
 .summary-sig {
     font-family: monospace;
 }
 .summary-sig-name {
-    color: #006080;
+    color: #206f90;
     font-weight: bold;
 }
 table.summary a.summary-sig-name:link {
@@ -339,10 +342,10 @@ table.summary a.summary-sig-name:visited {
     font-weight: bold;
 }
 .summary-sig-arg {
-    color: #006040;
+    color: #37a07e;
 }
 .summary-sig-default {
-    color: #501800;
+    color: #7f422a;
 }
 
 /* Subclass list
@@ -391,7 +394,7 @@ pre.variable {
     margin: 0;
     background: #F2F2F2;
     color: #000000;
-    border: 1px solid #CCC;
+    border: 1px solid #666;
 }
 .variable-linewrap {
     color: #604000;
@@ -469,20 +472,20 @@ pre.py-doctest {
     margin: 1em;
     background: #F2F2F2;
     color: #000000;
-    border: 1px solid #CCC;
+    border: 1px solid #666;
 }
 table pre.py-doctest {
     background: #F2F2F2;
     color: #000000;
 }
 pre.py-src {
-    border: 1px solid #CCC;
+    border: 1px solid #666;
     background: #FFF;
     color: #000000;
     margin: 20px 0;
 }
 .py-line {
-    border-left: 1px solid #CCC;
+    border-left: 1px solid #666;
     margin-left: .2em;
     padding-left: .4em;
 }
@@ -496,11 +499,11 @@ a.py-toggle {
 }
 div.py-highlight-hdr {
     border-top: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #666;
     background: #F2F2F2;
 }
 div.py-highlight {
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #666;
     background: #F2F2F2;
 }
 .py-prompt {

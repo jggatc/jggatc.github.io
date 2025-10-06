@@ -311,6 +311,16 @@ code {
     box-shadow: 0 2px 4px rgba(0,0,0,1.0);
 }
 
+.docs pre, .docs iframe {
+    background: #272b30;
+    border: 0;
+    width: 100%;
+    height: 1800px;
+    overflow: hidden;
+    scrollbar-width: none;
+    box-sizing: content-box;
+}
+
 .app-caption {
     display: block;
     font-size: 0.9em;

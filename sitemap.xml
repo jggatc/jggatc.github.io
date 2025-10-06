@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://gatc.ca/</loc>
-<lastmod>2025-10-05T21:26:23-00:00</lastmod>
+<lastmod>2025-10-06T18:00:10-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -46,13 +46,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://gatc.ca/docs/</loc>
-<lastmod>2025-09-28T12:12:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://gatc.ca/projects/draw-pad/</loc>
 <lastmod>2021-12-04T11:37:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -62,6 +55,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://gatc.ca/projects/genetic-construct/</loc>
 <lastmod>2010-10-07T18:59:00-04:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://gatc.ca/projects/interphase/doc</loc>
+<lastmod>2025-09-28T12:12:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -116,6 +116,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://gatc.ca/projects/pyj2d/doc</loc>
+<lastmod>2025-09-28T12:12:00-04:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://gatc.ca/projects/pyj2d/versions/</loc>
 <lastmod>2011-12-14T19:28:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -130,8 +137,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://gatc.ca/projects/pyjsdl/doc</loc>
+<lastmod>2025-09-28T12:12:00-04:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://gatc.ca/projects/pyjsdl/resources/</loc>
 <lastmod>2014-09-03T13:07:00-04:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://gatc.ca/projects/pyjsdl-ts/doc</loc>
+<lastmod>2025-09-28T12:12:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>

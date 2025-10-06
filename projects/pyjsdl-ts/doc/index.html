@@ -1,262 +1,248 @@
-<?xml version="1.0" encoding="ascii"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-  <title>pyjsdl</title>
-  <link rel="stylesheet" href="epydoc.css" type="text/css" />
-  <script type="text/javascript" src="epydoc.js"></script>
+    <title>Pyjsdl-ts API Documentation - GATC</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://gatc.ca/images/gatc-logo.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://gatc.ca/images/gatc-logo.png">
+
+<link rel="canonical" href="https://gatc.ca/projects/pyjsdl-ts/doc">
+
+        <meta name="author" content="JG" />
+
+    <meta property="og:site_name" content="GATC" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Pyjsdl-ts API Documentation"/>
+    <meta property="og:url" content="https://gatc.ca/projects/pyjsdl-ts/doc"/>
+    <meta property="og:description" content="" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://gatc.ca/theme/css/bootstrap.slate.min.css" type="text/css"/>
+    <link href="https://gatc.ca/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://gatc.ca/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://gatc.ca/theme/css/style.css" type="text/css"/>
+        <link href="https://gatc.ca/theme/css/custom.css" rel="stylesheet">
+
+        <link href="https://gatc.ca/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="GATC ATOM Feed"/>
+
+        <link href="https://gatc.ca/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="GATC RSS Feed"/>
+
+
+    
+    <!--HTML code insertion in page <head>-->
+
 </head>
+<body>
 
-<body bgcolor="white" text="black" link="blue" vlink="#204080"
-      alink="#204080">
-<!-- ==================== NAVIGATION BAR ==================== -->
-<table class="navbar" border="0" width="100%" cellpadding="0"
-       bgcolor="#a0c0ff" cellspacing="0">
-  <tr valign="middle">
-  <!-- Home link -->
-      <th bgcolor="#70b0f0" class="navbar-select"
-          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://gatc.ca/" class="navbar-brand">
+<img class="img-responsive pull-left gap-right" src="https://gatc.ca/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://gatc.ca/projects">Projects</a></li>
+                    <li><a href="https://gatc.ca/docs">Docs</a></li>
+                    <li><a href="https://gatc.ca/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
 
-  <!-- Tree link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+<!-- Banner -->
+<!-- End Banner -->
 
-  <!-- Index link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+<!-- Content Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Pyjsdl-ts API Documentation</h1>
+        
+        <div class="entry-content">
+            <div class='docs'>
+    <pre><iframe id='docs' src='/docs/pyjsdl-ts/index.html'></iframe></pre>
+</div>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
 
-  <!-- Help link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <!-- Sidebar/Images -->
+    <li class="list-group-item">
+        <ul class="list-group" id="images">
+                    <a href="https://gatc.ca" target="_blank"><img width="100%" class="img-thumbnail" src="https://gatc.ca/images/gatc.png"/></a>
+        </ul>
+    </li>
+    <!-- End Sidebar/Images -->
 
-  <!-- Project homepage -->
-      <th class="navbar" align="right" width="100%">
-        <table border="0" cellpadding="0" cellspacing="0">
-          <tr><th class="navbar" align="center"
-            ><a href="https://gatc.ca/projects/pyjsdl-ts" target="_top">Pyjsdl Module</a></th>
-          </tr></table></th>
-  </tr>
-</table>
-<table width="100%" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td width="100%">
-      <span class="breadcrumbs">
-        Package&nbsp;pyjsdl
-      </span>
-    </td>
-    <td>
-      <table cellpadding="0" cellspacing="0">
-        <!-- hide/show private -->
-      </table>
-    </td>
-  </tr>
-</table>
-<!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package pyjsdl</h1><p class="nomargin-top"></p>
-<!-- ==================== SUBMODULES ==================== -->
-<a name="section-Submodules"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Submodules</span></td>
-</tr>
-  <tr><td class="summary">
-  <ul class="nomargin">
-    <li> <strong class="uidlink"><a href="pyjsdl.color-module.html">pyjsdl.color</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.constants-module.html">pyjsdl.constants</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.cursors-module.html">pyjsdl.cursors</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.display-module.html">pyjsdl.display</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.draw-module.html">pyjsdl.draw</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.event-module.html">pyjsdl.event</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.font-module.html">pyjsdl.font</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.image-module.html">pyjsdl.image</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.key-module.html">pyjsdl.key</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.mask-module.html">pyjsdl.mask</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.mixer-module.html">pyjsdl.mixer</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.mouse-module.html">pyjsdl.mouse</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.pyjsarray-module.html">pyjsdl.pyjsarray</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.pyjsobj-module.html">pyjsdl.pyjsobj</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.pylib-module.html">pyjsdl.pylib</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.rect-module.html">pyjsdl.rect</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.sprite-module.html">pyjsdl.sprite</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.surface-module.html">pyjsdl.surface</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.surfarray-module.html">pyjsdl.surfarray</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.time-module.html">pyjsdl.time</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.transform-module.html">pyjsdl.transform</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.util-module.html">pyjsdl.util</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pyjsdl.vector-module.html">pyjsdl.vector</a></strong>    </li>
-  </ul></td></tr>
-</table>
+<!-- Sidebar/Pages -->
+<li class="list-group-item">
+  <h4>Projects</h4>
+  <ul class="list-group" id="pages">
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/microbe/">Microbe</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/replicator/">Replicator Machine</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/neural-construct/">Neural Construct</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/replicant/">Replicant</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/biomorph-entity/">Biomorph Entity</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/genetic-construct/">Genetic Construct</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/nexus/">Nexus</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/cell-matrix/">Cell Matrix</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/biomorph-evolve/">Biomorph Evolve</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/brownian-motion/">Brownian Motion</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/draw-pad/">Draw Pad</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/interphase/">Interphase</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/pyj2d/">PyJ2D</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://gatc.ca/projects/pyjsdl-ts/">Pyjsdl-ts</a>
+            </li>
+  </ul>
+</li>
+<!-- End Sidebar/Pages -->
 
-<br />
-<!-- ==================== CLASSES ==================== -->
-<a name="section-Classes"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Classes</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="pyjsdl.error-class.html" class="summary-name">error</a>
-    </td>
-  </tr>
-</table>
-<!-- ==================== FUNCTIONS ==================== -->
-<a name="section-Functions"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Functions</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="init"></a><span class="summary-sig-name">init</span>()</span><br />
-      Initialize module.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="setup"></a><span class="summary-sig-name">setup</span>(<span class="summary-sig-arg">callback</span>,
-        <span class="summary-sig-arg">images</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Initialize module for script execution.
-Argument include callback function to run and optional images list to preload.
-Callback function can also be an object with a run method to call.
-The images can be image URL, or base64 data in format (name.ext,data).</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="set_callback"></a><span class="summary-sig-name">set_callback</span>(<span class="summary-sig-arg">callback</span>)</span><br />
-      Set callback function.
-Argument callback function to run.
-Callback function can also be an object with a run method to call.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="setup_images"></a><span class="summary-sig-name">setup_images</span>(<span class="summary-sig-arg">images</span>)</span><br />
-      Add images to image preload list.
-The argument is an image or list of images representing an image URL, or base64 data in format (name.ext,data).
-Image preloading occurs at setup call.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="quit"></a><span class="summary-sig-name">quit</span>()</span><br />
-      Terminates canvas repaint and callback function.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-</table>
-<!-- ==================== NAVIGATION BAR ==================== -->
-<table class="navbar" border="0" width="100%" cellpadding="0"
-       bgcolor="#a0c0ff" cellspacing="0">
-  <tr valign="middle">
-  <!-- Home link -->
-      <th bgcolor="#70b0f0" class="navbar-select"
-          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="https://gatc.ca/biomorph-entity-app/">Biomorph Entity App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/brownian-motion-app/">Brownian Motion App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/biomorph-evolve-app/">Biomorph Evolve App</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></li>
+    <li class="list-group-item"><a href="https://gatc.ca/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
 
-  <!-- Tree link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4>Links</h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://biopython.org/" target="_blank">Biopython Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://red3d.com/cwr/boids/" target="_blank">Boids: Swarm Simulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html" target="_blank">Java 2D Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://jython.org/" target="_blank">Jython: Python on Java VM</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://numpy.org/" target="_blank">Numpy: Python Numeric Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://getpelican.com/" target="_blank">Pelican: Python Static Site Generator</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pygame.org/" target="_blank">Pygame Multimedia Library</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://pyjs.org/" target="_blank">Pyjs: Python-to-Javascript Compiler</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://python.org/" target="_blank">Python Programming Language</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://transcrypt.org/" target="_blank">Transcrypt: Python-to-JavaScript Compiler</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
 
-  <!-- Index link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+<footer>
+   <div class="container-fluid">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">
+             
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://gatc.ca/projects/pyjsdl-ts/doc#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://gatc.ca/theme/js/jquery.min.js"></script>
 
-  <!-- Help link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://gatc.ca/theme/js/bootstrap.min.js"></script>
 
-  <!-- Project homepage -->
-      <th class="navbar" align="right" width="100%">
-        <table border="0" cellpadding="0" cellspacing="0">
-          <tr><th class="navbar" align="center"
-            ><a href="https://gatc.ca/projects/pyjsdl-ts" target="_top">Pyjsdl Module</a></th>
-          </tr></table></th>
-  </tr>
-</table>
-<table border="0" cellpadding="0" cellspacing="0" width="100%%">
-  <tr>
-    <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Dec  4 18:31:57 2021
-    </td>
-    <td align="right" class="footer">
-      <a target="mainFrame" href="http://epydoc.sourceforge.net"
-        >http://epydoc.sourceforge.net</a>
-    </td>
-  </tr>
-</table>
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://gatc.ca/theme/js/respond.min.js"></script>
 
-<script type="text/javascript">
-  <!--
-  // Private objects are initially displayed (because if
-  // javascript is turned off then we want them to be
-  // visible); but by default, we want to hide them.  So hide
-  // them unless we have a cookie that says to show them.
-  checkCookie();
-  // -->
-</script>
+    <script src="https://gatc.ca/theme/js/custom.js"></script>
+
+
+
 </body>
 </html>
