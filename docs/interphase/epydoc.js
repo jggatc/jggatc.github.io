@@ -291,3 +291,22 @@ function redirect_url(dottedName) {
               }
           }
       }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var iframe = window.parent.document.querySelector('iframe');
+  var iframeOffset = iframe ? iframe.getBoundingClientRect().top : 0;
+  document.querySelectorAll('a[href*="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      var hash = href.split('#')[1];
+      if (hash) {
+        var target = document.querySelector('[id="' + hash + '"], [name="' + hash + '"]');
+        if (target) {
+          e.preventDefault();
+          var targetOffset = target.getBoundingClientRect().top + window.pageYOffset + iframeOffset;
+          window.parent.scrollTo({ top: targetOffset, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+});

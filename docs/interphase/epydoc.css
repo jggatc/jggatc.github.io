@@ -170,8 +170,8 @@ table.navbar table {
     color: #355f7c;
 }
 th.navbar-select {
-    background: #1C4E63;
-    color: #FFF;
+    color: #547d9b;
+    font-size: 1.2em;
 }
 table.navbar table th {
     padding-left: 15px;
@@ -179,6 +179,7 @@ table.navbar table th {
 table.navbar a {
     text-decoration: none;
     color: #FFF;
+    font-size: 1.2em;
     padding: 0 10px;
     display: block;
 }
