@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" data-theme-css-base="https://gatc.ca/theme/css" data-theme-dark="slate" data-theme-light="lux" data-theme-dark-styles="slate cyborg darkly superhero" data-bs-theme="dark">
 <head>
     <title>GATC</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <link href="https://gatc.ca/images/gatc-logo.png" rel="icon">
@@ -23,9 +23,9 @@
 
 
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://gatc.ca/theme/css/bootstrap.slate.min.css" type="text/css"/>
-    <link href="https://gatc.ca/theme/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+        <link rel="stylesheet" href="https://gatc.ca/theme/css/slate/bootstrap.min.css" id="bootstrap-theme-css" type="text/css"/>
+    <link href="https://gatc.ca/theme/icons/bootstrap-icons.min.css" rel="stylesheet">
 
     <link href="https://gatc.ca/theme/css/pygments/monokai.css" rel="stylesheet">
     <link rel="stylesheet" href="https://gatc.ca/theme/css/style.css" type="text/css"/>
@@ -42,31 +42,35 @@
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" aria-label="Main navigation">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="https://gatc.ca/" class="navbar-brand">
-<img class="img-responsive pull-left gap-right" src="https://gatc.ca/images/gatc-logo.png" width="24px"/>                         GATC - Code of Life
-            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="https://gatc.ca/projects">Projects</a></li>
-                    <li><a href="https://gatc.ca/docs">Docs</a></li>
-                    <li><a href="https://gatc.ca/about">About</a></li>
+        <a href="https://gatc.ca/" class="navbar-brand">
+<img class="d-inline-block align-text-top gap-right" src="https://gatc.ca/images/gatc-logo.png" width="24px" alt=""/>                     GATC - Code of Life
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://gatc.ca/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://gatc.ca/docs">Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://gatc.ca/about">About</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                  <li class="nav-item"><div class="d-flex align-items-center gap-2 flex-wrap">
+  <div class="btn-group btn-group-sm" role="group" aria-label="Theme">
+    <button type="button" class="btn btn-outline-secondary" data-theme-mode="dark" title="Dark theme" aria-label="Dark theme">
+      <i class="bi bi-moon-stars" aria-hidden="true"></i> Dark
+    </button>
+    <button type="button" class="btn btn-outline-secondary" data-theme-mode="light" title="Light theme" aria-label="Light theme">
+      <i class="bi bi-sun" aria-hidden="true"></i> Light
+    </button>
+  </div>
+</div></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-</div> <!-- /.navbar -->
+</nav>
 
 <!-- Banner -->
 <!-- End Banner -->
@@ -74,21 +78,22 @@
 <!-- Content Container -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-md-9">
             <article>
                 <h2><a href="https://gatc.ca/biomorph-entity-app/">Biomorph Entity App</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2025-01-22T20:48:00-05:00"> 22 January 2025</time>
+        <i class="bi bi-calendar"></i><time datetime="2025-01-22T20:48:00-05:00"> 22 January 2025</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/alife.html">alife</a>
         /
 	<a href="https://gatc.ca/tag/pyjsdl.html">pyjsdl</a>
@@ -97,26 +102,28 @@
         /
 	<a href="https://gatc.ca/tag/transcrypt.html">transcrypt</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/biomorph-entity/">Biomorph Entity</a> program simulates an artificial life entity. Simple rules of segment interaction leads to emergence of complex behaviour.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/biomorph-entity-app/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/biomorph-entity-app/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/brownian-motion-app/">Brownian Motion App</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2022-01-19T14:03:00-05:00"> 19 January 2022</time>
+        <i class="bi bi-calendar"></i><time datetime="2022-01-19T14:03:00-05:00"> 19 January 2022</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
@@ -127,26 +134,28 @@
         /
 	<a href="https://gatc.ca/tag/transcrypt.html">transcrypt</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>Brownian Motion Simulation demonstrates the phenomenon of <a class="reference external" href="https://en.wikipedia.org/wiki/Brownian_motion">brownian motion</a>, where microscopic particles display a random walk due to molecular collisions. For instance, particles suspended in liquid move due to random collisions by water molecules that are in constant motion.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/brownian-motion-app/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/brownian-motion-app/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/biomorph-evolve-app/">Biomorph Evolve App</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2021-12-12T01:03:00-05:00"> 12 December 2021</time>
+        <i class="bi bi-calendar"></i><time datetime="2021-12-12T01:03:00-05:00"> 12 December 2021</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/alife.html">alife</a>
         /
 	<a href="https://gatc.ca/tag/pyjsdl.html">pyjsdl</a>
@@ -155,26 +164,28 @@
         /
 	<a href="https://gatc.ca/tag/transcrypt.html">transcrypt</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/biomorph-evolve/">Biomorph Evolve</a> is a computer simulation of biomorph evolution. A biomorph is a form that resembles a living organism. The simulation derives altered biomorph morphology due to an evolutionary process. The program is an implementation of <a class="reference external" href="https://richarddawkins.net/">Richard Dawkins</a>' Blind Watchmaker algorithm discussed in his book <a class="reference external" href="https://en.wikipedia.org/wiki/The_Blind_Watchmaker">The Blind Watchmaker</a> and his …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/biomorph-evolve-app/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/biomorph-evolve-app/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/usage-of-pyjsdl-with-transcrypt/">Usage of Pyjsdl with Transcrypt</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2021-12-05T02:26:00-05:00"> 05 December 2021</time>
+        <i class="bi bi-calendar"></i><time datetime="2021-12-05T02:26:00-05:00"> 05 December 2021</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
         /
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
@@ -187,26 +198,28 @@
         /
 	<a href="https://gatc.ca/tag/transcrypt.html">transcrypt</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/pyjsdl-ts/">Pyjsdl</a> library in the <a class="reference external" href="https://gatc.ca/projects/pyjsdl-ts/">Pyjsdl-ts</a> package is a port of <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> to work with <a class="reference external" href="https://www.transcrypt.org/">Transcrypt</a>. Pyjsdl permit scripts coded in <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> to compile to JavaScript for online deployment. Pyjsdl is modelled on the Pygame commands that wraps JavaScript API providing the multimedia functionality. The post describes the process …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/usage-of-pyjsdl-with-transcrypt/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/usage-of-pyjsdl-with-transcrypt/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/transcrypt-port-of-pyjsdl/">Transcrypt Port of Pyjsdl</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2021-12-01T12:22:00-05:00"> 01 December 2021</time>
+        <i class="bi bi-calendar"></i><time datetime="2021-12-01T12:22:00-05:00"> 01 December 2021</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
         /
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
@@ -219,26 +232,28 @@
         /
 	<a href="https://gatc.ca/tag/transcrypt.html">transcrypt</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/pyjsdl-ts/">Pyjsdl-ts</a> library permits scripts coded in <a class="reference external" href="https://python.org/">Python</a> and <a class="reference external" href="https://pygame.org/">Pygame</a> to compile to JavaScript using the <a class="reference external" href="https://www.transcrypt.org/">Transcrypt</a> Python-to-JavaScript compiler. It is coded in Python that wraps JavaScript API for online deployment of web browser applications. The library is a port of <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> for Transcrypt that compiles Python 3 code to …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/transcrypt-port-of-pyjsdl/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/transcrypt-port-of-pyjsdl/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/interphase-cross-platform-gui-module/">Interphase: Cross-platform GUI Module</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-08-02T13:48:00-04:00"> 02 August 2015</time>
+        <i class="bi bi-calendar"></i><time datetime="2015-08-02T13:48:00-04:00"> 02 August 2015</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/jython.html">jython</a>
         /
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
@@ -249,26 +264,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/interphase/">Interphase</a> is a <a class="reference external" href="https://www.python.org/">Python</a> module designed to provide a graphics user interface (GUI) to <a class="reference external" href="https://pygame.org/">Pygame</a> applications. Two of my other projects provide Pygame functionality to additional platforms, including <a class="reference external" href="https://gatc.ca/projects/pyj2d/">PyJ2D</a> for the Java environment and <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> for the JavaScript environment. Since a dependency of Interphase is Pygame, the module is compatible …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/interphase-cross-platform-gui-module/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/interphase-cross-platform-gui-module/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/guide-to-pyjs-and-pyjsdl/">Guide to Pyjs and Pyjsdl</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-11-16T03:35:00-05:00"> 16 November 2014</time>
+        <i class="bi bi-calendar"></i><time datetime="2014-11-16T03:35:00-05:00"> 16 November 2014</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
@@ -281,26 +298,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>These notes provide instructions on the use of <a class="reference external" href="https://github.com/pyjs/pyjs">Pyjs</a> with <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a>, which were tested on Linux and Win7 systems.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/guide-to-pyjs-and-pyjsdl/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/guide-to-pyjs-and-pyjsdl/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/pyjsdl-demo-apps/">Pyjsdl Demo Apps</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-11-11T14:56:00-05:00"> 11 November 2014</time>
+        <i class="bi bi-calendar"></i><time datetime="2014-11-11T14:56:00-05:00"> 11 November 2014</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/java.html">java</a>
@@ -317,26 +336,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The apps on this page were coded in <a class="reference external" href="https://www.python.org/">Python</a> and <a class="reference external" href="https://www.pygame.org/">Pygame</a>. They were derived from the <a class="reference external" href="https://www.pygame.org/docs/ref/examples.html">Pygame examples</a> included in Pygame distribution. The first app is the Chimp example that is also used in a Pygame <a class="reference external" href="https://www.pygame.org/docs/tut/chimp/ChimpLineByLine.html">tutorial</a>.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/pyjsdl-demo-apps/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/pyjsdl-demo-apps/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">Compile Apps with Pyjs and Pyjsdl</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-09-03T15:25:00-04:00"> 03 September 2014</time>
+        <i class="bi bi-calendar"></i><time datetime="2014-09-03T15:25:00-04:00"> 03 September 2014</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
@@ -349,26 +370,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> implements <a class="reference external" href="https://pygame.org/">Pygame</a> through JavaScript functionality permitting porting <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> apps to the Web browser as JavaScript/HTML5 apps via <a class="reference external" href="https://pyjs.org/">Pyjs</a> compilation. This post provides some additional details required to port the app, supplementing a previous <a class="reference external" href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">post</a>. The following app was deployed from Serpent Duel <a class="reference external" href="https://gatc.ca/files/serpentduel.zip">script</a>, and runs with Python …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/compile-apps-with-pyjs-and-pyjsdl/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">Deploy JavaScript Application Using Pyjsdl</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2013-07-31T19:25:00-04:00"> 31 July 2013</time>
+        <i class="bi bi-calendar"></i><time datetime="2013-07-31T19:25:00-04:00"> 31 July 2013</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
@@ -381,26 +404,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> module is modelled on <a class="reference external" href="https://pygame.org/">Pygame</a>/<a class="reference external" href="https://www.libsdl.org">SDL</a> methods that wraps JavaScript functionality including HTML5 canvas. The module permits scripts coded in <a class="reference external" href="https://python.org/">Python</a>/<a class="reference external" href="https://pygame.org/">Pygame</a> to compile to JavaScript using the <a class="reference external" href="https://pyjs.org/">Pyjs</a> compiler, allowing deployment of JavaScript applications without extensive editing of the script.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/deploy-javascript-application-using-pyjsdl/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/pyjsdl-python-to-javascript-module/">Pyjsdl: Python-to-JavaScript Module</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2013-04-27T09:58:00-04:00"> 27 April 2013</time>
+        <i class="bi bi-calendar"></i><time datetime="2013-04-27T09:58:00-04:00"> 27 April 2013</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/html5-canvas.html">html5 canvas</a>
         /
 	<a href="https://gatc.ca/tag/javascript.html">javascript</a>
@@ -413,26 +438,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/pyjsdl/">Pyjsdl</a> module is modelled on <a class="reference external" href="https://pygame.org/">Pygame</a>/<a class="reference external" href="https://www.libsdl.org">SDL</a> designed to permit scripts coded in <a class="reference external" href="https://python.org/">Python</a> programming language and <a class="reference external" href="https://pygame.org/">Pygame</a> multimedia library to compile to JavaScript using the <a class="reference external" href="https://pyjs.org/">Pyjs</a> compiler. The module is coded in Python that wraps JavaScript libraries and harnesses the HTML5 canvas for deployment of web browser 2D …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/pyjsdl-python-to-javascript-module/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/pyjsdl-python-to-javascript-module/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/app-deployment-using-pyj2d/">App Deployment Using PyJ2D</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2012-02-08T13:13:00-05:00"> 08 February 2012</time>
+        <i class="bi bi-calendar"></i><time datetime="2012-02-08T13:13:00-05:00"> 08 February 2012</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/java.html">java</a>
         /
 	<a href="https://gatc.ca/tag/java2d.html">java2d</a>
@@ -443,26 +470,28 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/pyj2d/">PyJ2D</a> module permits scripts coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://pygame.org/">Pygame</a> module to run in the Java virtual machine (JVM) using the <a class="reference external" href="https://www.jython.org/">Jython</a> interpreter. PyJ2D wraps several Java libraries including the Java 2D graphics library to emulate Pygame functionality. Information about PyJ2D can be obtained on the <a class="reference external" href="https://gatc.ca/projects/pyj2d/">PyJ2D …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/app-deployment-using-pyj2d/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/app-deployment-using-pyj2d/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/pyj2d-python-java2d-app/">PyJ2D: Python-Java2D App</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-11-21T16:35:00-05:00"> 21 November 2011</time>
+        <i class="bi bi-calendar"></i><time datetime="2011-11-21T16:35:00-05:00"> 21 November 2011</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/java.html">java</a>
         /
 	<a href="https://gatc.ca/tag/java2d.html">java2d</a>
@@ -473,43 +502,47 @@
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/pyj2d/">PyJ2D</a> is a module designed with the intent to allow scripts coded in <a class="reference external" href="https://python.org/">Python</a> programming language and the <a class="reference external" href="https://pygame.org/">Pygame</a> module to run in the Java virtual machine (JVM). Python programs can run in the JVM using <a class="reference external" href="https://www.jython.org/">Jython</a>, a Java-encoded Python interpreter that includes much of the standard library and can …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/pyj2d-python-java2d-app/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/pyj2d-python-java2d-app/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/coding-in-python/">Coding in Python</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-11-18T15:46:00-05:00"> 18 November 2011</time>
+        <i class="bi bi-calendar"></i><time datetime="2011-11-18T15:46:00-05:00"> 18 November 2011</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>My <a class="reference external" href="/projects/">projects</a> are coded in <a class="reference external" href="https://python.org/">Python</a> programming language. Python is an open source, object-oriented, scripting language with clear syntax, and the source code is run directly by the Python interpreter. The Python interpreter can be obtained for numerous operating systems, making the code cross-platform, and has an extensive built-in library …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/coding-in-python/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/coding-in-python/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/genetic-construct-program/">Genetic Construct Program</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2010-10-07T19:40:00-04:00"> 07 October 2010</time>
+        <i class="bi bi-calendar"></i><time datetime="2010-10-07T19:40:00-04:00"> 07 October 2010</time>
     </span>
 
 
@@ -517,69 +550,75 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/genetic-construct/">Genetic Construct</a> is a program that generates a visual construct of a genetic sequence. I programmed it in <a class="reference external" href="https://www.python.org/">Python programming language</a> for the visual exploration of genetic sequence constructs to discover genetic patterns that could be the genetic signature for gene regulatory switches, or protein motifs and structural domains, biologically …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/genetic-construct-program/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/genetic-construct-program/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/interphase-module-demo-pack/">Interphase Module Demo Pack</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2010-02-05T20:11:00-05:00"> 05 February 2010</time>
+        <i class="bi bi-calendar"></i><time datetime="2010-02-05T20:11:00-05:00"> 05 February 2010</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/gui-interface.html">gui interface</a>
         /
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>I created a collection of programs that use my <a class="reference external" href="https://gatc.ca/projects/interphase/">Interphase</a> module to design the interface panel. The programs, packaged together in <a class="reference external" href="https://gatc.ca/projects/interphase-pack/">Interphase Pack</a>, includes Serpent Duel, Pod Descent, and Sliding Control Puzzle. These programs are written in <a class="reference external" href="https://www.python.org/">Python</a> programming language and <a class="reference external" href="https://www.pygame.org/">Pygame</a> multimedia module. The source of the programs are …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/interphase-module-demo-pack/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/interphase-module-demo-pack/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/python-program-executables/">Python Program Executables</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-12-23T23:52:00-05:00"> 23 December 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-12-23T23:52:00-05:00"> 23 December 2009</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>I made standalone executables for Linux and Windows of my <a class="reference external" href="https://www.python.org/">Python</a> programs <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe</a>, <a class="reference external" href="https://gatc.ca/projects/replicator/">Replicator Machine</a>, <a class="reference external" href="https://gatc.ca/projects/neural-construct/">Neural Construct</a> and <a class="reference external" href="https://gatc.ca/projects/biomorph-entity/">Biomorph Entity</a>. These executables were built using <a class="reference external" href="https://pypi.org/project/cx-Freeze/">cx_Freeze</a>, and have Python and all dependent libraries included, no installation needed.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/python-program-executables/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/python-program-executables/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/biomorph-entity-simulation/">Biomorph Entity Simulation</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-12-03T13:44:00-05:00"> 03 December 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-12-03T13:44:00-05:00"> 03 December 2009</time>
     </span>
 
 
@@ -587,19 +626,21 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>The <a class="reference external" href="https://gatc.ca/projects/biomorph-entity/">Biomorph Entity</a> program simulates a virtual creature. From experimenting with simple rules that govern the interaction of the segments, the computer simulation developed an emergent behaviour of the collective. In the future, I may add genes to express the discreet rules and in using genetic programming techniques bring evolution …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/biomorph-entity-simulation/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/biomorph-entity-simulation/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/replicant-the-molecule-of-life/">Replicant: The Molecule of Life</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-11-28T23:00:00-05:00"> 28 November 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-11-28T23:00:00-05:00"> 28 November 2009</time>
     </span>
 
 
@@ -607,19 +648,21 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/replicant/">Replicant</a> is a program that simulates the molecule of life, DNA. The model is based on some simple principles. I wrote it using <a class="reference external" href="https://www.python.org/">Python</a> programming language and the <a class="reference external" href="https://www.pygame.org/">Pygame</a> multimedia library. Later, I will try to bring further complexity to the model, such as interaction between complementary bases of the …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/replicant-the-molecule-of-life/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/replicant-the-molecule-of-life/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/microbial-simulation-video/">Microbial Simulation Video</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-11-16T14:53:00-05:00"> 16 November 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-11-16T14:53:00-05:00"> 16 November 2009</time>
     </span>
 
 
@@ -627,45 +670,49 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>I have uploaded a <a class="reference external" href="/media/videos/">video</a> clip to demonstrate my program <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe</a>, a Microbial Simulation. <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe</a>, written in <a class="reference external" href="https://www.python.org/">Python</a> programming language, simulates the biological behaviour of microbes, and explores the dimension of artificial life. You can view the video on the <a class="reference external" href="/media/videos/">demo videos</a> page. I will upload more clips of my …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/microbial-simulation-video/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/microbial-simulation-video/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/interphase-pygame-gui-module/">Interphase Pygame GUI Module</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-10-11T19:04:00-04:00"> 11 October 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-10-11T19:04:00-04:00"> 11 October 2009</time>
     </span>
 
 
 
 
 
-<span class="label label-default">Tags</span>
+<span class="badge text-bg-secondary">Tags</span>
 	<a href="https://gatc.ca/tag/gui-interface.html">gui interface</a>
         /
 	<a href="https://gatc.ca/tag/pygame.html">pygame</a>
         /
 	<a href="https://gatc.ca/tag/python.html">python</a>
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/interphase/">Interphase</a> module is a GUI library that adds interface panel functionality to a <a class="reference external" href="https://www.python.org/">Python</a>/<a class="reference external" href="https://www.pygame.org/">Pygame</a> application. I developed the module to make it relatively easy to add an interface panel to a Pygame program. It is used as an interface panel for my biology simulations <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe</a>, <a class="reference external" href="https://gatc.ca/projects/neural-construct/">Neural Construct</a>, and <a class="reference external" href="https://gatc.ca/projects/replicator/">Replicator …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/interphase-pygame-gui-module/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/interphase-pygame-gui-module/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/biology-simulations/">Biology Simulations</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-10-11T17:50:00-04:00"> 11 October 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-10-11T17:50:00-04:00"> 11 October 2009</time>
     </span>
 
 
@@ -673,19 +720,21 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>In addition to extensive updating <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe - Microbial Simulation</a>, I have updated my other biology simulation programs, <a class="reference external" href="https://gatc.ca/projects/replicator/">Replicator Machine</a> and <a class="reference external" href="https://gatc.ca/projects/neural-construct/">Neural Construct</a>. These <a class="reference external" href="https://gatc.ca/projects/">projects</a> have been programmed in <a class="reference external" href="https://www.python.org/">Python</a>/<a class="reference external" href="https://www.pygame.org/">Pygame</a>. One important update has been to adapt the GUI interface panel that I started in the <a class="reference external" href="https://gatc.ca/projects/microbe/">Microbe</a> program to function in …</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/biology-simulations/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/biology-simulations/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/neural-construct-released/">Neural Construct Released</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-08-07T18:00:00-04:00"> 07 August 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-08-07T18:00:00-04:00"> 07 August 2009</time>
     </span>
 
 
@@ -693,19 +742,21 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/neural-construct/">Neural Construct</a> is a neural simulation program. The construct is a neuron matrix that is responsive to stimuli. The individual neurons have been programmed with some basic neuron functionality, and along with the neural interconnections that network through the construct, emerge complex signals. I programmed it in <a class="reference external" href="https://www.python.org/">Python</a>/<a class="reference external" href="https://www.pygame.org/">Pygame</a>.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/neural-construct-released/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/neural-construct-released/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/replicator-machine-released/">Replicator Machine Released</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-07-12T18:00:00-04:00"> 12 July 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-07-12T18:00:00-04:00"> 12 July 2009</time>
     </span>
 
 
@@ -713,19 +764,21 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p><a class="reference external" href="https://gatc.ca/projects/replicator/">Replicator Machine</a> is a viral infection simulation. The program simulates basic infection in which the virus infects a cell and replicates. In control of a nanobot, you can combat the virus. I programmed it using the <a class="reference external" href="https://www.python.org/">Python</a> programming language and the <a class="reference external" href="https://www.pygame.org/">Pygame</a> library.</p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/replicator-machine-released/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/replicator-machine-released/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="https://gatc.ca/microbe-released/">Microbe Released</a></h2>
-                    <div class="well well-sm">
+                    <div class="card">
+                        <div class="card-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="badge text-bg-secondary">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2009-03-08T18:00:00-04:00"> 08 March 2009</time>
+        <i class="bi bi-calendar"></i><time datetime="2009-03-08T18:00:00-04:00"> 08 March 2009</time>
     </span>
 
 
@@ -733,18 +786,19 @@
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                        </div>
+                    </div>
                 <div class="summary"><p>With the intent to apply a computational approach to experiment with biological concepts, I have been learning programming. I have dual goals, to explore the code of life and to venture into the realm of artificial life. With this aspiration, I have pursued several projects that are designed in <a class="reference external" href="https://www.python.org/">Python …</a></p>
-                    <a class="btn btn-default btn-xs" href="https://gatc.ca/microbe-released/">more ...</a>
+                    <a class="btn btn-secondary btn-sm" href="https://gatc.ca/microbe-released/">more ...</a>
                 </div>
             </article>
             <hr/>
 
         </div>
-        <div class="col-sm-3" id="sidebar">
+        <div class="col-md-3" id="sidebar">
             <aside>
 <!-- Sidebar -->
-<section class="well well-sm">
+<section class="card">
   <ul class="list-group list-group-flush">
 
     <!-- Sidebar/Images -->
@@ -757,7 +811,7 @@
 
 <!-- Sidebar/Pages -->
 <li class="list-group-item">
-  <h4>Projects</h4>
+  <h4><i class="bi bi-house"></i><span class="icon-label">Projects</span></h4>
   <ul class="list-group" id="pages">
             <li class="list-group-item">
               <a href="https://gatc.ca/projects/microbe/">Microbe</a>
@@ -810,7 +864,7 @@
 
 <!-- Sidebar/Recent Posts -->
 <li class="list-group-item">
-  <h4>Posts</h4>
+  <h4><i class="bi bi-house"></i><span class="icon-label">Posts</span></h4>
   <ul class="list-group" id="recentposts">
     <li class="list-group-item"><a href="https://gatc.ca/biomorph-entity-app/">Biomorph Entity App</a></li>
     <li class="list-group-item"><a href="https://gatc.ca/brownian-motion-app/">Brownian Motion App</a></li>
@@ -829,7 +883,7 @@
 
 <!-- Sidebar/Links -->
 <li class="list-group-item">
-  <h4>Links</h4>
+  <h4><i class="bi bi-box-arrow-up-right"></i><span class="icon-label">Links</span></h4>
   <ul class="list-group" id="links">
     <li class="list-group-item">
       <a href="https://alife.org/" target="_blank">Alife: Artificial Life Society</a>
@@ -879,20 +933,19 @@
    <div class="container-fluid">
       <hr>
       <div class="row">
-         <div class="col-xs-10">
+         <div class="col-10 col-sm-11">
              
          </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="https://gatc.ca#">Back to top</a></p></div>
+         <div class="col-2 col-sm-1"><p class="float-end"><i class="bi bi-arrow-up"></i> <a href="https://gatc.ca#">Back to top</a></p></div>
       </div>
    </div>
 </footer>
 <script src="https://gatc.ca/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://gatc.ca/theme/js/bootstrap.min.js"></script>
+<script src="https://gatc.ca/theme/js/bootstrap.bundle.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://gatc.ca/theme/js/respond.min.js"></script>
+<script src="https://gatc.ca/theme/js/theme.js"></script>
 
     <script src="https://gatc.ca/theme/js/custom.js"></script>
 
